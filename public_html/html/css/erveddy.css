@@ -123,6 +123,9 @@ col-text-center {
 .white-text {
   color: #ffffff;
 }
+.blur-black {
+  color: #737373;
+}
 .service-padding {
   padding-bottom: 10px;
 }
