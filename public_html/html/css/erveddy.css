@@ -1,6 +1,3 @@
-test {
-  color: #000000;
-}
 .head-img {
   -webkit-background-size: cover;
   background: url(../img/head_bg.png) 50% 50% / cover;
@@ -12,15 +9,18 @@ test {
   height: 552px;
 }
 .contact-box {
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 0%;
   padding-top: 15px;
-  padding-left: 20px;
+  padding-left: 40px;
   padding-right: 0px;
   padding-bottom: 5%;
   color: #fff;
   background: url('../img/bg1px.png');
   background-repeat: repeat;
+}
+.contact-box .pad {
+  padding-bottom: 10px;
 }
 .padding-cta {
   padding: 25px 0 55px;
@@ -86,7 +86,7 @@ col-text-center {
 }
 .btn-service {
   border-radius: 0px;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   padding-left: 70px;
   padding-right: 70px;
@@ -105,6 +105,24 @@ col-text-center {
   opacity: 45% !important;
   -webkit-opacity: 0.45 !important;
 }
+.btn-large-text {
+  font-size: 24px;
+}
+.site-footer {
+  background: none repeat scroll 0 0 #1d2333;
+  color: #b3b3b3;
+  padding: 20px 0 10px;
+}
+.site-footer .title {
+  font-size: 24px;
+  color: #fff;
+}
+.site-footer .green-text {
+  color: #00ff00;
+}
+.white-text {
+  color: #ffffff;
+}
 .service-padding {
   padding-bottom: 10px;
 }
@@ -114,7 +132,7 @@ col-text-center {
 }
 .text-left-head {
   color: #fff;
-  margin-top: 14%;
+  margin-top: 5%;
 }
 .col-client {
   position: relative;
@@ -142,4 +160,3 @@ col-text-center {
     padding-bottom: 10%;
   }
 }
-/*# sourceMappingURL=erveddy.css.map */

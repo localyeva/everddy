@@ -1,8 +1,6 @@
 @black :  #000;
 @white: #fff;
-test{
-    color : @black;
-}
+@larg-button-text-size: 24px;
 
 .head-img {
     -webkit-background-size: cover; background: url(../img/head_bg.png) 50% 50% / cover;height: 552px
@@ -11,7 +9,10 @@ test{
     -webkit-background-size: cover; background: url(../img/foot_bg.png) 50% 50% / cover;height: 552px
 }
 .contact-box {
-    margin-top: 10%;margin-left: 0%;padding-top: 15px;padding-left: 20px;padding-right: 0px;padding-bottom: 5%;color:#fff; background: url('../img/bg1px.png'); background-repeat: repeat;
+    margin-top: 5%;margin-left: 0%;padding-top: 15px;padding-left: 40px;padding-right: 0px;padding-bottom: 5%;color:#fff; background: url('../img/bg1px.png'); background-repeat: repeat;
+    .pad{
+        padding-bottom: 10px;
+    }
 }
 .padding-cta {
     padding: 25px 0 55px;
@@ -66,7 +67,7 @@ col-text-center {
     /*padding-top: 10px;*/
     /*padding-bottom: 10px;*/
     /*background-repeat: repeat;*/
-    font-size: 24px;
+    font-size: @larg-button-text-size;
     padding-left: 10%; 
     padding-right: 10%;
     color: @white;
@@ -91,7 +92,7 @@ col-text-center {
 
 .btn-service{    
     border-radius: 0px;
-    font-size: 30px;
+    font-size: @larg-button-text-size;
     font-weight: bold;
     padding-left: 70px; padding-right: 70px;
     color: @white;
@@ -110,6 +111,29 @@ col-text-center {
     }
 }
 
+.btn-large-text{
+    font-size: @larg-button-text-size;
+    //font-weight: bold;
+}
+
+
+.site-footer {    
+    background: none repeat scroll 0 0 #1d2333;
+    color: #b3b3b3;
+    padding: 20px 0 10px;
+    .title{
+        font-size: @larg-button-text-size;
+        color: #fff;        
+    }
+    .green-text{
+        color: #00ff00;
+    }
+}
+
+.white-text{
+    color: @white;
+}
+
 .service-padding {
     padding-bottom:10px;
 }
@@ -120,13 +144,13 @@ col-text-center {
 }
 
 .text-left-head{
-    color:#fff;margin-top: 14%;
+    color:#fff;margin-top: 5%;
 }
 .col-client{
     position:relative; width: 100%
 }
 .col-contact{
-    clear:both;position:relative; width: 100%; padding-bottom: 10px
+    clear:both;position:relative; width: 100%; padding-bottom: 10px;    
 }
 .square-btn{
     border-radius: 0px
