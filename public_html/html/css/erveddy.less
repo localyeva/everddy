@@ -9,7 +9,12 @@
     -webkit-background-size: cover; background: url(../img/foot_bg.png) 50% 50% / cover;height: 552px
 }
 .contact-box {
-    margin-top: 5%;margin-left: 0%;padding-top: 15px;padding-left: 40px;padding-right: 0px;padding-bottom: 5%;color:#fff; background: url('../img/bg1px.png'); background-repeat: repeat;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 0;
+    padding-top: 15px;padding-left: 40px;padding-right: 0px;padding-bottom: 5%;color:#fff; background: url('../img/bg1px.png'); background-repeat: repeat;
     .pad{
         padding-bottom: 10px;
     }
@@ -18,7 +23,14 @@
     padding: 25px 0 55px;
 }
 
-
+.bg-height{
+    height: 552px;
+    padding-left: 0px;
+    position: relative;
+}
+.btn-xs-headbox{
+    display: none;
+}
 .home-cta {
     background: none repeat scroll 0 0 @white;
     color: #000;
@@ -81,8 +93,7 @@ col-text-center {
         vertical-align: middle;
         width: 38px;
         height: 38px;
-        opacity: 45% !important;
-        -webkit-opacity: 0.45 !important;
+        opacity: 0.45 !important;
     }
     &:hover{
         background: lighten(@color-bg-btn-1, 45%); 
@@ -148,7 +159,11 @@ col-text-center {
 }
 
 .text-left-head{
-    color:#fff;margin-top: 5%;
+    color:#fff;
+    margin: 0;
+    position: absolute;
+    top: 50%; 
+    transform: translate(0, -50%)
 }
 .col-client{
     position:relative; width: 100%
