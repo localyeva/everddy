@@ -1,3 +1,4 @@
+@import 'back-to-top-style.css';
 .head-img {
   -webkit-background-size: cover;
   background: url(../img/head_bg.png) 50% 50% / cover;
@@ -62,7 +63,7 @@ col-text-center {
   /*padding-top: 10px;*/
   /*padding-bottom: 10px;*/
   /*background-repeat: repeat;*/
-  font-size: 24px;
+  font-size: 20px;
   padding-left: 10%;
   padding-right: 10%;
   color: #ffffff;
@@ -86,7 +87,7 @@ col-text-center {
 }
 .btn-service {
   border-radius: 0px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   padding-left: 70px;
   padding-right: 70px;
@@ -106,7 +107,7 @@ col-text-center {
   -webkit-opacity: 0.45 !important;
 }
 .btn-large-text {
-  font-size: 24px;
+  font-size: 20px;
 }
 .site-footer {
   background: none repeat scroll 0 0 #1d2333;
@@ -114,7 +115,7 @@ col-text-center {
   padding: 20px 0 10px;
 }
 .site-footer .title {
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
 }
 .site-footer .green-text {
@@ -150,6 +151,10 @@ col-text-center {
 .square-btn {
   border-radius: 0px;
 }
+footer p {
+  margin: 0px;
+  padding: 0px;
+}
 /*--------------------------------------------------------------------- import*/
 @media (max-device-width: 480px) {
   /*.col-client{
@@ -160,6 +165,6 @@ col-text-center {
 }
 @media screen and (max-width: 767px) {
   .contact-box {
-    padding-bottom: 10%;
+    display: none;
   }
 }
