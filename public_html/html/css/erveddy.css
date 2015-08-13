@@ -198,6 +198,10 @@ col-text-center {
 }
 .site-footer .green-text {
   color: #62B446;
+  padding-bottom: 10px;
+}
+.site-footer .dif-text {
+  color: #ddd2d2;
 }
 .site-footer p {
   margin: 0px;
