@@ -8,10 +8,28 @@
 function theme_customize_register($wp_customize) {
 
     /* ADD SECTION */
+    /* GENERAL */
+    $wp_customize->add_section('general', array(
+        'title' => __('GENERAL'),
+        'priority' => 20,
+    ));
+
     /* TOP */
     $wp_customize->add_section('top', array(
         'title' => __('TOP'),
-        'priority' => 20,
+        'priority' => 21,
+    ));
+
+    /* SERVICE */
+    $wp_customize->add_section('service', array(
+        'title' => __('SERVICE'),
+        'priority' => 22,
+    ));
+    
+    /* BENEFIT OF USING SERVICE */
+    $wp_customize->add_section('benefit_service', array(
+        'title' => __('BENEFIT OF USING SERVICE'),
+        'priority' => 22,
     ));
 
     /* ADD SETTING & CONTROL */
@@ -36,6 +54,74 @@ function theme_customize_register($wp_customize) {
         'priority' => 1,
         'type' => 'text',
     ));
+
+    $wp_customize->add_setting('top_descript', array(
+        'default' => '',
+    ));
+    $wp_customize->add_control('top_descript_c', array(
+        'label' => __('Top Description'),
+        'section' => 'top',
+        'settings' => 'top_descript',
+        'priority' => 1,
+        'type' => 'textarea',
+    ));
+
+    /* GENERAL */
+    $wp_customize->add_setting('site_logo', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'site_logo_c', array(
+        'label' => __('Logo'),
+        'section' => 'general',
+        'settings' => 'site_logo',
+        'priority' => 1,
+    )));
+
+    /* SERVICE */
+    $wp_customize->add_setting('service_text', array(
+        'default' => '',
+    ));
+    $wp_customize->add_control('service_text_c', array(
+        'label' => __('Service Text'),
+        'section' => 'service',
+        'settings' => 'service_text',
+        'priority' => 1,
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_setting('service_descript', array(
+        'default' => '',
+    ));
+    $wp_customize->add_control('service_descript_c', array(
+        'label' => __('Service Description'),
+        'section' => 'service',
+        'settings' => 'service_descript',
+        'priority' => 1,
+        'type' => 'textarea',
+    ));
+    
+    /* BENEFIT OF USING SERVICE */
+    $wp_customize->add_setting('benefit_service_text', array(
+        'default' => '',
+    ));
+    $wp_customize->add_control('benefit_service_text_c', array(
+        'label' => __('Benefit Service Text'),
+        'section' => 'benefit_service',
+        'settings' => 'benefit_service_text',
+        'priority' => 1,
+        'type' => 'text',
+    ));
+    
+    $wp_customize->add_setting('benefit_service_image', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'benefit_service_image_c', array(
+        'label' => __('Image'),
+        'section' => 'benefit_service',
+        'settings' => 'benefit_service_image',
+        'priority' => 1,
+    )));
+    
 }
 
 add_action('customize_register', 'theme_customize_register');
@@ -44,7 +130,7 @@ add_action('customize_register', 'theme_customize_register');
 function generate_css() {
     ?>
     <style>
-        .keyvisual.index{
+        .head-img{
             background: url("<?php echo get_top_image() ?>") no-repeat scroll center center / 100% auto;
         }
     </style>
@@ -52,6 +138,12 @@ function generate_css() {
 }
 
 add_action('wp_head', 'generate_css');
+
+/* GENERAL */
+
+function get_site_logo() {
+    return esc_url(get_theme_mod('site_logo'));
+}
 
 /* TOP */
 
@@ -61,4 +153,31 @@ function get_top_image() {
 
 function get_top_text() {
     return get_theme_mod('top_text');
+}
+
+function get_top_descript() {
+    $description = get_theme_mod('top_descript');
+    //
+    return convert_newline($description, '<h3>', '</h3>');
+}
+
+/* SERVICE */
+
+function get_service_text() {
+    return get_theme_mod('service_text');
+}
+
+function get_service_descript() {
+    $description = get_theme_mod('service_descript');
+    //
+    return convert_newline($description, '<p class="blur-black">', '</p>');
+}
+
+/* BENEFIT OF USING SERVICE */
+function get_benefit_service_text() {
+    return get_theme_mod('benefit_service_text');
+}
+
+function get_benefit_service_image() {
+    return esc_url(get_theme_mod('benefit_service_image'));
 }

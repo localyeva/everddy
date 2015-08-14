@@ -6,6 +6,7 @@
  * 
  */
 
+include_once (dirname(__FILE__) . '/MyFunctions.php');
 include_once (dirname(__FILE__) . '/MyThemeOptions.php');
 include_once (dirname(__FILE__) . '/MyTheme_Customize.php');
 include_once(dirname(__FILE__) . '/cpt_acf_definitions.php');
