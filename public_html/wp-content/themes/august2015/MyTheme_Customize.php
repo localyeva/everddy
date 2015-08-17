@@ -25,19 +25,19 @@ function theme_customize_register($wp_customize) {
         'title' => __('SERVICE'),
         'priority' => 22,
     ));
-    
+
     /* BENEFIT OF USING SERVICE */
     $wp_customize->add_section('benefit_service', array(
         'title' => __('BENEFIT OF USING SERVICE'),
         'priority' => 23,
     ));
-    
+
     /* BENEFITS OF FOREIGN ADOPTION */
     $wp_customize->add_section('benefit_foreign', array(
         'title' => __('BENEFITS OF FOREIGN ADOPTION'),
         'priority' => 24,
     ));
-    
+
     /* CONTACT */
     $wp_customize->add_section('contact', array(
         'title' => __('CONTACT'),
@@ -111,7 +111,7 @@ function theme_customize_register($wp_customize) {
         'priority' => 1,
         'type' => 'textarea',
     ));
-    
+
     /* BENEFIT OF USING SERVICE */
     $wp_customize->add_setting('benefit_service_text', array(
         'default' => '',
@@ -123,7 +123,7 @@ function theme_customize_register($wp_customize) {
         'priority' => 1,
         'type' => 'text',
     ));
-    
+
     $wp_customize->add_setting('benefit_service_image', array(
         'default' => ''
     ));
@@ -133,7 +133,7 @@ function theme_customize_register($wp_customize) {
         'settings' => 'benefit_service_image',
         'priority' => 1,
     )));
-    
+
     /* BENEFITS OF FOREIGN ADOPTION */
     $wp_customize->add_setting('benefit_foreign_text', array(
         'default' => '',
@@ -145,7 +145,7 @@ function theme_customize_register($wp_customize) {
         'priority' => 1,
         'type' => 'text',
     ));
-    
+
     $wp_customize->add_setting('benefit_foreign_descript', array(
         'default' => '',
     ));
@@ -156,8 +156,18 @@ function theme_customize_register($wp_customize) {
         'priority' => 1,
         'type' => 'textarea',
     ));
-    
+
     /* CONTACT */
+    $wp_customize->add_setting('contact_image_bg', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'contact_image_bg_c', array(
+        'label' => __('Image BG'),
+        'section' => 'contact',
+        'settings' => 'contact_image_bg',
+        'priority' => 1,
+    )));
+
     $wp_customize->add_setting('contact_text', array(
         'default' => '',
     ));
@@ -168,7 +178,7 @@ function theme_customize_register($wp_customize) {
         'priority' => 1,
         'type' => 'text',
     ));
-    
+
     $wp_customize->add_setting('contact_descript', array(
         'default' => '',
     ));
@@ -179,7 +189,6 @@ function theme_customize_register($wp_customize) {
         'priority' => 1,
         'type' => 'textarea',
     ));
-    
 }
 
 add_action('customize_register', 'theme_customize_register');
@@ -190,6 +199,9 @@ function generate_css() {
     <style>
         .head-img{
             background: url("<?php echo get_top_image() ?>") no-repeat scroll center center / 100% auto;
+        }
+        .foot-img{
+            background: url("<?php echo get_contact_image_bg() ?>") no-repeat scroll 50% 50% / cover;
         }
     </style>
     <?php
@@ -232,6 +244,7 @@ function get_service_descript() {
 }
 
 /* BENEFIT OF USING SERVICE */
+
 function get_benefit_service_text() {
     return get_theme_mod('benefit_service_text');
 }
@@ -241,22 +254,29 @@ function get_benefit_service_image() {
 }
 
 /* BENEFITS OF FOREIGN ADOPTION */
-function get_benefit_foreign_text(){
+
+function get_benefit_foreign_text() {
     return get_theme_mod('benefit_foreign_text');
 }
 
-function get_benefit_foreign_descript(){
+function get_benefit_foreign_descript() {
     $description = get_theme_mod('benefit_foreign_descript');
     //
-    return convert_newline($description, '<h3>', '</h3>');;
+    return convert_newline($description, '<h3>', '</h3>');
+    ;
 }
 
 /* CONTACT */
-function get_contact_text(){
+
+function get_contact_image_bg() {
+    return esc_url(get_theme_mod('contact_image_bg'));
+}
+
+function get_contact_text() {
     return get_theme_mod('contact_text');
 }
 
-function get_contact_descript(){
+function get_contact_descript() {
     $description = get_theme_mod('contact_descript');
     //
     return convert_newline($description, '<p class="blur-black">', '</p>');

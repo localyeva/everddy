@@ -61,7 +61,7 @@ get_header();
                             <article id="post-12" class="post-12 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
                                 <header class="home-entry-header">
                                     <a href="javascript:void(0)">
-                                        <img class="attachment-home-blog wp-post-image img-responsive" width="251" height="303" src="<?php echo get_field('image') ?>" />
+                                        <img class="attachment-home-blog wp-post-image img-responsive" width="251" height="303" src="<?php echo get_field('image') ?>" alt="<?php echo get_the_title() ?>" />
                                     </a>
                                 </header>
                             </article>
