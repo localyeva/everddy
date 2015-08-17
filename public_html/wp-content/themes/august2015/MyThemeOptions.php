@@ -110,9 +110,9 @@ class MyThemeOptions {
 
         // Social script
         add_settings_field('ct_facebook_script', 'Facebook Script', array($this, 'ct_facebook_script_callback'), 'section_social_script', 'id_social_script');
-        
+
         add_settings_field('ct_google_plus_script', 'Google Plus Script', array($this, 'ct_google_plus_script_callback'), 'section_social_script', 'id_social_script');
-        
+
         add_settings_field('ct_twitter_script', 'Twitter Script', array($this, 'ct_twitter_script_callback'), 'section_social_script', 'id_social_script');
 
         //
@@ -139,11 +139,11 @@ class MyThemeOptions {
         if (isset($input['ct_facebook_script'])) {
             $new_input['ct_facebook_script'] = $input['ct_facebook_script'];
         }
-        
+
         if (isset($input['ct_google_plus_script'])) {
             $new_input['ct_google_plus_script'] = $input['ct_google_plus_script'];
         }
-        
+
         if (isset($input['ct_twitter_script'])) {
             $new_input['ct_twitter_script'] = $input['ct_twitter_script'];
         }
@@ -190,13 +190,13 @@ class MyThemeOptions {
                 '<textarea rows="4" cols="50" id="title" name="my_theme_option[ct_facebook_script]">%s</textarea>', isset($this->options['ct_facebook_script']) ? esc_attr($this->options['ct_facebook_script']) : ''
         );
     }
-    
+
     public function ct_google_plus_script_callback() {
         printf(
                 '<textarea rows="4" cols="50" id="title" name="my_theme_option[ct_google_plus_script]">%s</textarea>', isset($this->options['ct_google_plus_script']) ? esc_attr($this->options['ct_google_plus_script']) : ''
         );
     }
-    
+
     public function ct_twitter_script_callback() {
         printf(
                 '<textarea rows="4" cols="50" id="title" name="my_theme_option[ct_twitter_script]">%s</textarea>', isset($this->options['ct_twitter_script']) ? esc_attr($this->options['ct_twitter_script']) : ''

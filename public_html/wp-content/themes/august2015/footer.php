@@ -1,3 +1,4 @@
+<?php global $theme_options; ?>
 <a href="#0" class="cd-top">Top</a>
 <footer id="colophon" class="site-footer" role="contentinfo">
     <div class="grid grid-pad">
@@ -6,11 +7,19 @@
                 <div class="title">株式会社エバディ</div>
                 <div class='title green-text'>everddy Co., Ltd.</div>
                 <b class="white-text">Address</b>
-                <p>〒105-0012</p>
-                <p>東京都港区芝大門1-10-11　芝大門センタービル10F</p>
-                <p>10F Shiba Daimon Centre, 1-10-11 Shiba Daimon, Minato Ku, Tokyo, Japan</p>
-                <p>zip: 105-0012</p>
-                <p><b class="dif-text">Tel</b>:03-6880-9083 - <b class="dif-text">Fax</b>:03-6880-9201</p>
+                <?php if (isset($theme_options['ct_com_postal_code'])): ?>
+                    <p>〒<?php echo $theme_options['ct_com_postal_code'] ?></p>
+                <?php endif; ?>
+                <?php if (isset($theme_options['ct_com_address_jp'])): ?>
+                    <p><?php echo $theme_options['ct_com_address_jp'] ?></p>
+                <?php endif; ?>
+                <?php if (isset($theme_options['ct_com_address_en'])): ?>
+                    <p><?php echo $theme_options['ct_com_address_en'] ?></p>
+                <?php endif; ?>
+                <?php if (isset($theme_options['ct_com_zip_code'])): ?>
+                    <p>Zip<?php echo $theme_options['ct_com_zip_code'] ?></p>
+                <?php endif; ?>                    
+                <p><b class="dif-text">Tel</b>:<?php echo $theme_options['ct_com_telephone'] ?> - <b class="dif-text">Fax</b>:<?php echo $theme_options['ct_com_fax'] ?></p>
             </aside>
         </div>
     </div><!-- grid -->

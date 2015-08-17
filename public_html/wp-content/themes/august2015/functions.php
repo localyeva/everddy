@@ -7,7 +7,8 @@
  */
 
 include_once (dirname(__FILE__) . '/MyFunctions.php');
-include_once (dirname(__FILE__) . '/MyThemeOptions.php');
+include_once (dirname(__FILE__) . '/MySettings.php');
+//include_once (dirname(__FILE__) . '/MyThemeOptions.php');
 include_once (dirname(__FILE__) . '/MyTheme_Customize.php');
 include_once(dirname(__FILE__) . '/cpt_acf_definitions.php');
 
@@ -63,9 +64,26 @@ function add_custom_script() {
     }
 
     // Custom Script
-    if (isset($theme_options['ct_custom_script'])) {
-        $script .= $theme_options['ct_custom_script'];
+    if ($theme_options['ct_use_script']){
+        if (isset($theme_options['ct_custom_script'])) {
+            $script .= $theme_options['ct_custom_script'];
+        }
     }
+    
+    echo $script;
+}
 
-    printf($script);
+add_action('wp_head', 'add_custom_css');
+
+function add_custom_css(){
+    global $theme_options;
+    $css = '<style id="custom-css">';
+    
+    if ($theme_options['ct_use_css']){
+        $css .= $theme_options['ct_custom_css'];
+    }
+    
+    $css .= '</style>';
+    
+    echo $css;
 }

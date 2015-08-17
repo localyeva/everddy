@@ -29,7 +29,19 @@ function theme_customize_register($wp_customize) {
     /* BENEFIT OF USING SERVICE */
     $wp_customize->add_section('benefit_service', array(
         'title' => __('BENEFIT OF USING SERVICE'),
-        'priority' => 22,
+        'priority' => 23,
+    ));
+    
+    /* BENEFITS OF FOREIGN ADOPTION */
+    $wp_customize->add_section('benefit_foreign', array(
+        'title' => __('BENEFITS OF FOREIGN ADOPTION'),
+        'priority' => 24,
+    ));
+    
+    /* CONTACT */
+    $wp_customize->add_section('contact', array(
+        'title' => __('CONTACT'),
+        'priority' => 25,
     ));
 
     /* ADD SETTING & CONTROL */
@@ -122,6 +134,52 @@ function theme_customize_register($wp_customize) {
         'priority' => 1,
     )));
     
+    /* BENEFITS OF FOREIGN ADOPTION */
+    $wp_customize->add_setting('benefit_foreign_text', array(
+        'default' => '',
+    ));
+    $wp_customize->add_control('benefit_foreign_text_c', array(
+        'label' => __('Benefit Foreign Text'),
+        'section' => 'benefit_foreign',
+        'settings' => 'benefit_foreign_text',
+        'priority' => 1,
+        'type' => 'text',
+    ));
+    
+    $wp_customize->add_setting('benefit_foreign_descript', array(
+        'default' => '',
+    ));
+    $wp_customize->add_control('benefit_foreign_descript_c', array(
+        'label' => __('Benefit Foreign Descript'),
+        'section' => 'benefit_foreign',
+        'settings' => 'benefit_foreign_descript',
+        'priority' => 1,
+        'type' => 'textarea',
+    ));
+    
+    /* CONTACT */
+    $wp_customize->add_setting('contact_text', array(
+        'default' => '',
+    ));
+    $wp_customize->add_control('contact_text_c', array(
+        'label' => __('Contact Text'),
+        'section' => 'contact',
+        'settings' => 'contact_text',
+        'priority' => 1,
+        'type' => 'text',
+    ));
+    
+    $wp_customize->add_setting('contact_descript', array(
+        'default' => '',
+    ));
+    $wp_customize->add_control('contact_descript_c', array(
+        'label' => __('Contact Descript'),
+        'section' => 'contact',
+        'settings' => 'contact_descript',
+        'priority' => 1,
+        'type' => 'textarea',
+    ));
+    
 }
 
 add_action('customize_register', 'theme_customize_register');
@@ -180,4 +238,26 @@ function get_benefit_service_text() {
 
 function get_benefit_service_image() {
     return esc_url(get_theme_mod('benefit_service_image'));
+}
+
+/* BENEFITS OF FOREIGN ADOPTION */
+function get_benefit_foreign_text(){
+    return get_theme_mod('benefit_foreign_text');
+}
+
+function get_benefit_foreign_descript(){
+    $description = get_theme_mod('benefit_foreign_descript');
+    //
+    return convert_newline($description, '<h3>', '</h3>');;
+}
+
+/* CONTACT */
+function get_contact_text(){
+    return get_theme_mod('contact_text');
+}
+
+function get_contact_descript(){
+    $description = get_theme_mod('contact_descript');
+    //
+    return convert_newline($description, '<p class="blur-black">', '</p>');
 }
