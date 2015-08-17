@@ -64,7 +64,7 @@ function add_custom_script() {
     }
 
     // Custom Script
-    if ($theme_options['ct_use_script']){
+    if (isset($theme_options['ct_use_script']) && $theme_options['ct_use_script']){
         if (isset($theme_options['ct_custom_script'])) {
             $script .= $theme_options['ct_custom_script'];
         }
@@ -79,7 +79,7 @@ function add_custom_css(){
     global $theme_options;
     $css = '<style id="custom-css">';
     
-    if ($theme_options['ct_use_css']){
+    if (isset($theme_options['ct_use_css']) && $theme_options['ct_use_css']){
         $css .= $theme_options['ct_custom_css'];
     }
     
