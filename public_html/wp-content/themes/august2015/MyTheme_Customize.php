@@ -135,6 +135,16 @@ function theme_customize_register($wp_customize) {
     )));
 
     /* BENEFITS OF FOREIGN ADOPTION */
+    $wp_customize->add_setting('benefit_foreign_image_bg', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'benefit_foreign_image_bg_c', array(
+        'label' => __('Image BG'),
+        'section' => 'benefit_foreign',
+        'settings' => 'benefit_foreign_image_bg',
+        'priority' => 1,
+    )));
+
     $wp_customize->add_setting('benefit_foreign_text', array(
         'default' => '',
     ));
@@ -158,16 +168,6 @@ function theme_customize_register($wp_customize) {
     ));
 
     /* CONTACT */
-    $wp_customize->add_setting('contact_image_bg', array(
-        'default' => ''
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'contact_image_bg_c', array(
-        'label' => __('Image BG'),
-        'section' => 'contact',
-        'settings' => 'contact_image_bg',
-        'priority' => 1,
-    )));
-
     $wp_customize->add_setting('contact_text', array(
         'default' => '',
     ));
@@ -201,7 +201,7 @@ function generate_css() {
             background: url("<?php echo get_top_image() ?>") no-repeat scroll center center / 100% auto;
         }
         .foot-img{
-            background: url("<?php echo get_contact_image_bg() ?>") no-repeat scroll 50% 50% / cover;
+            background: url("<?php echo get_benefit_foreign_image_bg() ?>") no-repeat scroll 50% 50% / cover;
         }
     </style>
     <?php
@@ -255,6 +255,10 @@ function get_benefit_service_image() {
 
 /* BENEFITS OF FOREIGN ADOPTION */
 
+function get_benefit_foreign_image_bg() {
+    return esc_url(get_theme_mod('benefit_foreign_image_bg'));
+}
+
 function get_benefit_foreign_text() {
     return get_theme_mod('benefit_foreign_text');
 }
@@ -267,10 +271,6 @@ function get_benefit_foreign_descript() {
 }
 
 /* CONTACT */
-
-function get_contact_image_bg() {
-    return esc_url(get_theme_mod('contact_image_bg'));
-}
 
 function get_contact_text() {
     return get_theme_mod('contact_text');

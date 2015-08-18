@@ -59,6 +59,14 @@ function ilc_save_theme_settings() {
                 $settings['ct_custom_script'] = $_POST['ct_custom_script'];
                 break;
             case 'homepage' :
+                $settings['ct_com_name_jp'] = $_POST['ct_com_name_jp'];
+                $settings['ct_com_name_en'] = $_POST['ct_com_name_en'];
+                $settings['ct_com_email'] = $_POST['ct_com_email'];
+                $settings['ct_com_establishment'] = $_POST['ct_com_establishment'];
+                $settings['ct_com_capital'] = $_POST['ct_com_capital'];
+                $settings['ct_com_officer'] = $_POST['ct_com_officer'];
+                $settings['ct_com_content'] = $_POST['ct_com_content'];
+                $settings['ct_com_on_map'] = $_POST['ct_com_on_map'];
                 $settings['ct_com_postal_code'] = $_POST['ct_com_postal_code'];
                 $settings['ct_com_address_jp'] = $_POST['ct_com_address_jp'];
                 $settings['ct_com_address_en'] = $_POST['ct_com_address_en'];
@@ -94,7 +102,7 @@ function ilc_admin_tabs($current = 'homepage') {
 function ilc_settings_page() {
     global $pagenow;
     $settings = get_option("my_theme_option");
-    $theme_data = get_theme_data(TEMPLATEPATH . '/style.css');
+    $theme_data = wp_get_theme();
     ?>
 
     <div class="wrap">
@@ -203,6 +211,18 @@ function ilc_settings_page() {
                                 </td>
                             </tr>
                             <tr>
+                                <th><label for="ct_com_name_jp">Company Name (Japanese)</label></th>
+                                <td>
+                                    <input type="text" size="70" id="ct_com_name_jp" name="ct_com_name_jp" value="<?php echo esc_html(stripslashes($settings["ct_com_name_jp"])); ?>" /><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="ct_com_name_en">Company Name (English)</label></th>
+                                <td>
+                                    <input type="text" size="70" id="ct_com_name_jp" name="ct_com_name_en" value="<?php echo esc_html(stripslashes($settings["ct_com_name_en"])); ?>" /><br/>
+                                </td>
+                            </tr>
+                            <tr>
                                 <th><label for="ct_com_postal_code">〒 Postal Code</label></th>
                                 <td>
                                     <input type="text" id="ct_com_postal_code" name="ct_com_postal_code" value="<?php echo esc_html(stripslashes($settings["ct_com_postal_code"])); ?>" /><br/>
@@ -238,6 +258,42 @@ function ilc_settings_page() {
                                     <input type="text" id="ct_com_fax" name="ct_com_fax" value="<?php echo esc_html(stripslashes($settings["ct_com_fax"])); ?>" /><br/>
                                 </td>
                             </tr>
+                            <tr>
+                                <th><label for="ct_com_email">Email</label></th>
+                                <td>
+                                    <input type="text" size="70" id="ct_com_email" name="ct_com_email" value="<?php echo esc_html(stripslashes($settings["ct_com_email"])); ?>" /><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="ct_com_establishment">Foundid</label></th>
+                                <td>
+                                    <input type="text" id="ct_com_establishment" name="ct_com_establishment" value="<?php echo esc_html(stripslashes($settings["ct_com_establishment"])); ?>" /><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="ct_com_capital">Share Capital</label></th>
+                                <td>
+                                    <textarea type="text" id="ct_com_capital" name="ct_com_capital"><?php echo esc_html(stripslashes($settings["ct_com_capital"])); ?></textarea><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="ct_com_officer">Board Member</label></th>
+                                <td>
+                                    <textarea type="text" id="ct_com_officer" name="ct_com_officer" cols="70"><?php echo esc_html(stripslashes($settings["ct_com_officer"])); ?></textarea><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="ct_com_content">Bussiness Outline</label></th>
+                                <td>
+                                    <?php wp_editor($settings["ct_com_content"], 'ct_com_content', array('teeny' => true, 'media_buttons' => false, 'textarea_rows' => 8)); ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="ct_com_on_map">On Map</label></th>
+                                <td>
+                                    <textarea type="text" id="ct_com_on_map" name="ct_com_on_map" cols="70"><?php echo $settings["ct_com_on_map"]; ?></textarea><br/>
+                                </td>
+                            </tr>
                             <?php
                             break;
                     }
@@ -250,7 +306,7 @@ function ilc_settings_page() {
                 </p>
             </form>
 
-            <p><?php echo $theme_data['Name'] ?> theme by <?php echo $theme_data['AuthorName'] ?></p>
+            <p><?php echo $theme_data['Name'] ?> theme by <?php echo $theme_data['Author'] ?> (<?php echo $theme_data['Version'] ?>)</p>
         </div>
 
     </div>
