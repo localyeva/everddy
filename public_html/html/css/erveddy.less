@@ -1,6 +1,7 @@
 @black :  #000;
 @white: #fff;
 @green: #62B446;
+@boldgreen: #00A04C;
 @blur-black: #737373;
 @larg-button-text-size: 20px;
 
@@ -273,13 +274,19 @@ h1{
 }
 
 .number-title{
-    color: @green;
+    color: @boldgreen;
 }
 .part-pad{
-    padding-bottom: 80px;
+    padding-bottom: 60px;
+}
+.last-part-pad{
+    padding-bottom: 20px;
 }
 .img-pad{
     padding-right: 25px;
+}
+#part0 {
+    padding-top: 60px;
 }
 #part1 {
     padding-top: 40px;
@@ -376,6 +383,40 @@ h1{
         transform: translate(-50%)
     }
 }
+
+#detail{
+    ul{
+        list-style-type: square;
+        margin-left: 20px;
+        color: @blur-black;
+    }
+    .btn-detail-green{
+        font-size: @larg-button-text-size;
+        background-color: @boldgreen;
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+    #detail-part2{
+        .bpad{
+            padding-bottom: 30px;
+        }
+    }
+    .smallrow{
+        display: table;
+        margin-bottom: 5px;
+    }
+    .smallnum{
+        display: table-cell;
+        vertical-align: middle;
+        font-size:22px;
+    }
+    .smalltit{
+        padding-left: 5px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
 
 /*--------------------------------------------------------------------- import*/
 @import 'screen-xs.less';

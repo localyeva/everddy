@@ -248,13 +248,19 @@ h1 {
   height: 552px;
 }
 .number-title {
-  color: #62b446;
+  color: #00a04c;
 }
 .part-pad {
-  padding-bottom: 80px;
+  padding-bottom: 60px;
+}
+.last-part-pad {
+  padding-bottom: 20px;
 }
 .img-pad {
   padding-right: 25px;
+}
+#part0 {
+  padding-top: 60px;
 }
 #part1 {
   padding-top: 40px;
@@ -341,6 +347,34 @@ h1 {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%);
+}
+#detail ul {
+  list-style-type: square;
+  margin-left: 20px;
+  color: #737373;
+}
+#detail .btn-detail-green {
+  font-size: 20px;
+  background-color: #00a04c;
+  padding-left: 26px;
+  padding-right: 26px;
+}
+#detail #detail-part2 .bpad {
+  padding-bottom: 30px;
+}
+#detail .smallrow {
+  display: table;
+  margin-bottom: 5px;
+}
+#detail .smallnum {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 22px;
+}
+#detail .smalltit {
+  padding-left: 5px;
+  display: table-cell;
+  vertical-align: middle;
 }
 /*--------------------------------------------------------------------- import*/
 @media (max-width: 480px) {
