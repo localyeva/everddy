@@ -211,7 +211,6 @@ col-text-center {
     //font-weight: bold;
 }
 
-
 .site-footer {    
     background: none repeat scroll 0 0 #0e2739;
     color: #b3b3b3;
@@ -241,7 +240,9 @@ col-text-center {
 .white-text{
     color: @white;
 }
-
+.black-text{
+    color: @black;
+}
 .blur-black{
     color: @blur-black;    
 }
@@ -278,6 +279,15 @@ h1{
 .merit-head-img {
     -webkit-background-size: cover; background: url(../img/merit_head_bg.png) 50% 50% / cover;height: 552px;
 }
+.detail-head-img {
+    -webkit-background-size: cover; background: url(../img/merit_head_bg.png) 50% 50% / cover;height: 552px;
+}
+.benefit-head-img {
+    -webkit-background-size: cover; background: url(../img/merit_head_bg.png) 50% 50% / cover;height: 552px;
+}
+.profile-head-img{
+    -webkit-background-size: cover; background: url(../img/merit_head_bg.png) 50% 50% / cover;height: 552px;
+}
 
 .number-title{
     color: @boldgreen;
@@ -292,7 +302,7 @@ h1{
     padding-right: 25px;
 }
 #part0 {
-    padding-top: 60px;
+    padding-top: 40px;
 }
 #part1 {
     padding-top: 40px;
@@ -389,11 +399,12 @@ h1{
     }
 }
 
-#detail, #benefit{
-    ul{
-        list-style-type: square;
-        margin-left: 20px;
-    }
+ul{
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+#detail, #benefit{    
     .btn-detail-green{
         font-size: @larg-button-text-size;
         background-color: @boldgreen;
@@ -401,6 +412,9 @@ h1{
         padding-right: 26px;
         padding-top: 6px;
         padding-bottom: 6px;
+        &:hover{
+            background-color: #62b446;
+        }
     }
     #detail-part2{
         .bpad{
@@ -423,6 +437,41 @@ h1{
         padding-left: 5px;
         display: table-cell;
         vertical-align: middle;
+    }
+}
+
+#profile{
+    table {
+        th{
+            width: 25%;
+            padding-left: 40px;
+            background-color: #e0eef8;
+            vertical-align: middle;
+        }
+        td{
+            padding: 20px 0 20px 40px;
+            background-color: #fafafd;
+        }
+        td#map{
+            padding: 0px 0px 0px 0px;
+        }
+    }
+    #map-canvas{
+        height: 400px;       
+    }
+    .btn-strange{
+        font-size: @larg-button-text-size;
+        border: 2px solid @blur-black;
+        padding: 6px 12px;
+        color: @blur-black;
+        width: 250px;
+        &:hover{
+            background: lighten(@blur-black, 45%); 
+            //border-color: fade(#FFF, 45%);
+        }
+    }
+    .top-pad{
+        padding-top: 60px;
     }
 }
 

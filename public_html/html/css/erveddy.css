@@ -211,6 +211,9 @@ col-text-center {
 .white-text {
   color: #ffffff;
 }
+.black-text {
+  color: #000000;
+}
 .blur-black {
   color: #737373;
 }
@@ -245,6 +248,21 @@ h1 {
   background: url(../img/merit_head_bg.png) 50% 50% / cover;
   height: 552px;
 }
+.detail-head-img {
+  -webkit-background-size: cover;
+  background: url(../img/merit_head_bg.png) 50% 50% / cover;
+  height: 552px;
+}
+.benefit-head-img {
+  -webkit-background-size: cover;
+  background: url(../img/merit_head_bg.png) 50% 50% / cover;
+  height: 552px;
+}
+.profile-head-img {
+  -webkit-background-size: cover;
+  background: url(../img/merit_head_bg.png) 50% 50% / cover;
+  height: 552px;
+}
 .number-title {
   color: #00a04c;
 }
@@ -258,7 +276,7 @@ h1 {
   padding-right: 25px;
 }
 #part0 {
-  padding-top: 60px;
+  padding-top: 40px;
 }
 #part1 {
   padding-top: 40px;
@@ -345,8 +363,7 @@ h1 {
   margin-right: -50%;
   transform: translate(-50%);
 }
-#detail ul,
-#benefit ul {
+ul {
   list-style-type: square;
   margin-left: 20px;
 }
@@ -358,6 +375,10 @@ h1 {
   padding-right: 26px;
   padding-top: 6px;
   padding-bottom: 6px;
+}
+#detail .btn-detail-green:hover,
+#benefit .btn-detail-green:hover {
+  background-color: #62b446;
 }
 #detail #detail-part2 .bpad,
 #benefit #detail-part2 .bpad {
@@ -383,6 +404,35 @@ h1 {
   padding-left: 5px;
   display: table-cell;
   vertical-align: middle;
+}
+#profile table th {
+  width: 25%;
+  padding-left: 40px;
+  background-color: #e0eef8;
+  vertical-align: middle;
+}
+#profile table td {
+  padding: 20px 0 20px 40px;
+  background-color: #fafafd;
+}
+#profile table td#map {
+  padding: 0px 0px 0px 0px;
+}
+#profile #map-canvas {
+  height: 400px;
+}
+#profile .btn-strange {
+  font-size: 20px;
+  border: 2px solid #737373;
+  padding: 6px 12px;
+  color: #737373;
+  width: 250px;
+}
+#profile .btn-strange:hover {
+  background: #e6e6e6;
+}
+#profile .top-pad {
+  padding-top: 60px;
 }
 /*--------------------------------------------------------------------- import*/
 @media (max-width: 480px) {
