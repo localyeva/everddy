@@ -345,11 +345,13 @@ h1 {
   margin-right: -50%;
   transform: translate(-50%);
 }
-#detail ul {
+#detail ul,
+#benefit ul {
   list-style-type: square;
   margin-left: 20px;
 }
-#detail .btn-detail-green {
+#detail .btn-detail-green,
+#benefit .btn-detail-green {
   font-size: 20px;
   background-color: #00a04c;
   padding-left: 26px;
@@ -357,22 +359,27 @@ h1 {
   padding-top: 6px;
   padding-bottom: 6px;
 }
-#detail #detail-part2 .bpad {
+#detail #detail-part2 .bpad,
+#benefit #detail-part2 .bpad {
   padding-bottom: 30px;
 }
-#detail #detail-part2 .green {
+#detail #detail-part2 .green,
+#benefit #detail-part2 .green {
   color: #00a04c;
 }
-#detail .smallrow {
+#detail .smallrow,
+#benefit .smallrow {
   display: table;
   margin-bottom: 5px;
 }
-#detail .smallnum {
+#detail .smallnum,
+#benefit .smallnum {
   display: table-cell;
   vertical-align: middle;
   font-size: 22px;
 }
-#detail .smalltit {
+#detail .smalltit,
+#benefit .smalltit {
   padding-left: 5px;
   display: table-cell;
   vertical-align: middle;
