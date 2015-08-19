@@ -50,14 +50,14 @@ body{
     position: absolute;
     top: 50%; 
     transform: translate(0, -50%);
-    padding-right: 120px;
+    padding-right: 140px;
     h1{
-        font-size: 50px;
+        font-size: 46px;
         line-height: 50px;
         margin-top: 0px
     }
     h3{
-        font-size: 21px;
+        font-size: 25px;
         line-height: 40px;
     }
 }
@@ -73,8 +73,14 @@ body{
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    right: 0;
-    padding-top: 15px;padding-left: 40px;padding-right: 0px;padding-bottom: 5%;color:#fff; background: url('../img/bg1px.png'); background-repeat: repeat;
+    right: 20px;
+    padding-top: 15px;
+    padding-left: 40px;
+    //padding-right: 0px;
+    padding-bottom: 5%;
+    color:#fff; 
+    background: url('../img/bg1px.png'); 
+    background-repeat: repeat;
     .pad{
         padding-bottom: 10px;        
     }
@@ -138,7 +144,7 @@ body{
 
 .bg-height{
     height: 552px;
-    padding-left: 0px;
+    //padding-left: 0px;
     position: relative;
 }
 
@@ -351,7 +357,6 @@ h1{
         ul{
             list-style-image: url("../img/marker.png");
             margin-left: 20px;
-            color: @blur-black;
         }
     }
     .hcpad{
@@ -374,7 +379,7 @@ h1{
         font-size: 19px;
         line-height: 1.42857;
         border-radius: 4px;
-        width: 310px;
+        width: 300px;
     }
     .center{
         position: absolute;
@@ -388,17 +393,21 @@ h1{
     ul{
         list-style-type: square;
         margin-left: 20px;
-        color: @blur-black;
     }
     .btn-detail-green{
         font-size: @larg-button-text-size;
         background-color: @boldgreen;
         padding-left: 26px;
         padding-right: 26px;
+        padding-top: 6px;
+        padding-bottom: 6px;
     }
     #detail-part2{
         .bpad{
             padding-bottom: 30px;
+        }
+        .green{
+            color: @boldgreen;
         }
     }
     .smallrow{
