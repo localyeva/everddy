@@ -208,6 +208,17 @@ col-text-center {
   margin: 0px;
   padding: 0px;
 }
+.foot-contact {
+  padding-bottom: 80px;
+}
+.foot-contact .btn-foot-contact1 {
+  width: 230px;
+  font-size: 20px;
+}
+.foot-contact .btn-foot-contact2 {
+  width: 230px;
+  font-size: 20px;
+}
 .white-text {
   color: #ffffff;
 }
@@ -367,6 +378,10 @@ ul {
   list-style-type: square;
   margin-left: 20px;
 }
+.green {
+  color: #00a04c;
+  font-size: 20px;
+}
 #detail .btn-detail-green,
 #benefit .btn-detail-green {
   font-size: 20px;
@@ -384,10 +399,6 @@ ul {
 #benefit #detail-part2 .bpad {
   padding-bottom: 30px;
 }
-#detail #detail-part2 .green,
-#benefit #detail-part2 .green {
-  color: #00a04c;
-}
 #detail .smallrow,
 #benefit .smallrow {
   display: table;
@@ -404,6 +415,11 @@ ul {
   padding-left: 5px;
   display: table-cell;
   vertical-align: middle;
+}
+#profile .text-left-head,
+#contact1 .text-left-head,
+#contact2 .text-left-head {
+  top: 37%;
 }
 #profile table th {
   width: 25%;
@@ -433,6 +449,28 @@ ul {
 }
 #profile .top-pad {
   padding-top: 60px;
+}
+.grid-pad-nano {
+  padding: 20px;
+}
+.nano {
+  border: 1px solid #D3D3D3;
+  background: #fff;
+  height: 250px;
+}
+.nano .nano-content {
+  padding: 20px;
+}
+.nano .nano-pane {
+  background: f1f1f1;
+}
+.nano .nano-slider {
+  background: #09afed !important;
+}
+.btn-contact1 {
+  width: 300px;
+  font-size: 20px;
+  margin-bottom: 60px;
 }
 /*--------------------------------------------------------------------- import*/
 @media (max-width: 480px) {
