@@ -64,7 +64,9 @@ function ilc_save_theme_settings() {
                 $settings['ct_com_email'] = $_POST['ct_com_email'];
                 $settings['ct_com_establishment'] = $_POST['ct_com_establishment'];
                 $settings['ct_com_capital'] = $_POST['ct_com_capital'];
+                $settings['ct_com_capital_en'] = $_POST['ct_com_capital_en'];
                 $settings['ct_com_officer'] = $_POST['ct_com_officer'];
+                $settings['ct_com_officer_en'] = $_POST['ct_com_officer_en'];
                 $settings['ct_com_content'] = $_POST['ct_com_content'];
                 $settings['ct_com_on_map'] = $_POST['ct_com_on_map'];
                 $settings['ct_com_postal_code'] = $_POST['ct_com_postal_code'];
@@ -211,15 +213,13 @@ function ilc_settings_page() {
                                 </td>
                             </tr>
                             <tr>
-                                <th><label for="ct_com_name_jp">Company Name (Japanese)</label></th>
+                                <th>
+                                    <label for="ct_com_name_jp">Company Name (Japanese)</label><br/>
+                                    <label for="ct_com_name_en">　　　　　　　　(English)</label>
+                                </th>
                                 <td>
                                     <input type="text" size="70" id="ct_com_name_jp" name="ct_com_name_jp" value="<?php echo esc_html(stripslashes($settings["ct_com_name_jp"])); ?>" /><br/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><label for="ct_com_name_en">Company Name (English)</label></th>
-                                <td>
-                                    <input type="text" size="70" id="ct_com_name_jp" name="ct_com_name_en" value="<?php echo esc_html(stripslashes($settings["ct_com_name_en"])); ?>" /><br/>
+                                    <input type="text" size="70" id="ct_com_name_en" name="ct_com_name_en" value="<?php echo esc_html(stripslashes($settings["ct_com_name_en"])); ?>" />
                                 </td>
                             </tr>
                             <tr>
@@ -229,15 +229,13 @@ function ilc_settings_page() {
                                 </td>
                             </tr>
                             <tr>
-                                <th><label for="ct_com_address_jp">Address (Japanese)</label></th>
+                                <th>
+                                    <label for="ct_com_address_jp">Address (Japanese)</label><br/>
+                                    <label for="ct_com_address_en">　　　　(English)</label>
+                                </th>
                                 <td>
                                     <input type="text" size="70" id="ct_com_address_jp" name="ct_com_address_jp" value="<?php echo esc_html(stripslashes($settings["ct_com_address_jp"])); ?>" /><br/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><label for="ct_com_address_en">Address (English)</label></th>
-                                <td>
-                                    <input type="text" size="70" id="ct_com_address_en" name="ct_com_address_en" value="<?php echo esc_html(stripslashes($settings["ct_com_address_en"])); ?>" /><br/>
+                                    <input type="text" size="70" id="ct_com_address_en" name="ct_com_address_en" value="<?php echo esc_html(stripslashes($settings["ct_com_address_en"])); ?>" />
                                 </td>
                             </tr>
                             <tr>
@@ -271,15 +269,23 @@ function ilc_settings_page() {
                                 </td>
                             </tr>
                             <tr>
-                                <th><label for="ct_com_capital">Share Capital</label></th>
+                                <th>
+                                    <label for="ct_com_capital">Share Capital (Japanese)</label><br/>
+                                    <label for="ct_com_capital_en">　　　　　　(English)</label>
+                                </th>
                                 <td>
-                                    <textarea type="text" id="ct_com_capital" name="ct_com_capital"><?php echo esc_html(stripslashes($settings["ct_com_capital"])); ?></textarea><br/>
+                                    <input type="text" id="ct_com_capital" name="ct_com_capital" value="<?php echo esc_html(stripslashes($settings["ct_com_capital"])); ?>" /><br/>
+                                    <input type="text" id="ct_com_capital_en" name="ct_com_capital_en" value="<?php echo esc_html(stripslashes($settings["ct_com_capital_en"])); ?>" /><br/>
                                 </td>
                             </tr>
                             <tr>
-                                <th><label for="ct_com_officer">Board Member</label></th>
+                                <th>
+                                    <label for="ct_com_officer">Board Member (Japanese)</label>
+                                    <label for="ct_com_officer_en">Board Member (English)</label>
+                                </th>
                                 <td>
-                                    <textarea type="text" id="ct_com_officer" name="ct_com_officer" cols="70"><?php echo esc_html(stripslashes($settings["ct_com_officer"])); ?></textarea><br/>
+                                    <input type="text" id="ct_com_officer" name="ct_com_officer" value="<?php echo esc_html(stripslashes($settings["ct_com_officer"])); ?>" size="70" /><br/>
+                                    <input type="text" id="ct_com_officer_en" name="ct_com_officer_en" value="<?php echo esc_html(stripslashes($settings["ct_com_officer_en"])); ?>" size="70" />
                                 </td>
                             </tr>
                             <tr>
