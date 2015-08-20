@@ -59,6 +59,14 @@ body {
   bottom: 10px;
   left: 50%;
 }
+#fixed-sequence {
+  position: relative;
+  height: 552px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  color: white;
+}
 .contact-box {
   margin: 0;
   position: absolute;
@@ -489,13 +497,12 @@ ul {
   margin-bottom: 60px;
 }
 /*--------------------------------------------------------------------- import*/
-@media (max-width: 480px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .text-left-head h1 {
-    font-size: 30px !important;
-    line-height: 40px;
+    font-size: 40px !important;
   }
   .text-left-head h3 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 30px;
   }
 }
@@ -505,5 +512,13 @@ ul {
   }
   .btn-xs-headbox {
     display: block !important;
+  }
+  .text-left-head h1 {
+    font-size: 40px !important;
+    line-height: 35px;
+  }
+  .text-left-head h3 {
+    font-size: 20px;
+    line-height: 25px;
   }
 }
