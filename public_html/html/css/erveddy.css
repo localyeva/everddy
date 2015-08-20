@@ -426,6 +426,12 @@ ul {
   display: table-cell;
   vertical-align: middle;
 }
+#detail .img-benefit,
+#benefit .img-benefit {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+}
 #profile .text-left-head,
 #contact1 .text-left-head,
 #contact2 .text-left-head {
