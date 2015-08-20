@@ -521,4 +521,10 @@ ul {
     font-size: 20px;
     line-height: 25px;
   }
+  .foot-contact .grid .text-right {
+    text-align: center;
+  }
+  .foot-contact .grid .text-left {
+    text-align: center;
+  }
 }
