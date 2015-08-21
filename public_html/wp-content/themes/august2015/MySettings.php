@@ -297,7 +297,7 @@ function ilc_settings_page() {
                             <tr>
                                 <th><label for="ct_com_on_map">On Map</label></th>
                                 <td>
-                                    <textarea type="text" id="ct_com_on_map" name="ct_com_on_map" cols="70"><?php echo $settings["ct_com_on_map"]; ?></textarea><br/>
+                                    <textarea type="text" id="ct_com_on_map" name="ct_com_on_map" cols="70"><?php echo stripslashes($settings["ct_com_on_map"]); ?></textarea><br/>
                                 </td>
                             </tr>
                             <?php
