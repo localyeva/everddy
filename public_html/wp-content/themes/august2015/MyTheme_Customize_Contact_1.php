@@ -7,7 +7,7 @@
 
 function contact1_theme_customize_register($wp_customize) {
     $wp_customize->add_section('contact_1', array(
-        'title' => __('CONTACT_1 PAGE'),
+        'title' => __('CONTACT 1 PAGE'),
         'priority' => 26,
     ));
     $wp_customize->add_setting('contact_1_top_image', array(
