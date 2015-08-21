@@ -39,6 +39,31 @@ function cptui_register_my_cpts() {
     register_post_type("service", $args);
 
     $labels = array(
+        "name" => "Service Detail",
+        "singular_name" => "Service Detail",
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "show_ui" => true,
+        "has_archive" => false,
+        "show_in_menu" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array("slug" => "service-detail", "with_front" => true),
+        "query_var" => true,
+        "menu_position" => 27,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h2.png',
+        "supports" => array("title"),
+    );
+    register_post_type("service-detail", $args);
+
+
+    $labels = array(
         "name" => "Service Feature",
         "singular_name" => "Service Feature",
     );
@@ -56,8 +81,8 @@ function cptui_register_my_cpts() {
         "hierarchical" => false,
         "rewrite" => array("slug" => "service-feature", "with_front" => true),
         "query_var" => true,
-        "menu_position" => 27,
-        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h2.png',
+        "menu_position" => 28,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h3.png',
         "supports" => array("title", "editor"),
     );
     register_post_type("service-feature", $args);
@@ -97,6 +122,18 @@ if (function_exists("register_field_group")) {
                 'preview_size' => 'thumbnail',
                 'library' => 'all',
             ),
+            array(
+                'key' => 'field_55d6e3373ea6f',
+                'label' => 'Redirect Url',
+                'name' => 'redirect_url',
+                'type' => 'text',
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'none',
+                'maxlength' => '',
+            ),
         ),
         'location' => array(
             array(
@@ -104,6 +141,49 @@ if (function_exists("register_field_group")) {
                     'param' => 'post_type',
                     'operator' => '==',
                     'value' => 'service',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array(
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array(
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+
+    register_field_group(array(
+        'id' => 'acf_service-detail',
+        'title' => 'Service Detail',
+        'fields' => array(
+            array(
+                'key' => 'field_55d6e2d2807e4',
+                'label' => 'Image Number',
+                'name' => 'image_number',
+                'type' => 'image',
+                'save_format' => 'url',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+            array(
+                'key' => 'field_55d6e2f7807e5',
+                'label' => 'Content',
+                'name' => 'content',
+                'type' => 'wysiwyg',
+                'default_value' => '',
+                'toolbar' => 'full',
+                'media_upload' => 'yes',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'service-detail',
                     'order_no' => 0,
                     'group_no' => 0,
                 ),
