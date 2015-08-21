@@ -97,27 +97,7 @@ get_header();
     </div>
 
 
-    <div class="home-cta foot-contact"> 
-        <div class="grid grid-pad">
-            <div class="col-1-1 text-center">
-                <h2>Contact</h2>
-            </div><!-- col-10-12 -->                        
-        </div><!-- grid -->
-        <div class="grid grid-pad">
-            <div class="col-1-1 text-center">
-                <p class="blur-black">サービスについてのご質問、</p>
-                <p class="blur-black">人材についてのご相談、海外でのお仕事探しなど、お気軽にお問い合わせください。</p>
-            </div><!-- col-10-12 -->                        
-        </div><!-- grid -->
-        <div class="grid grid-pad">                        
-            <div class="col-1-2 text-right">
-                <a href="#" class="btn btn-primary square-btn btn-foot-contact1 pad-btn">人材をお探しの企業様</a>
-            </div>
-            <div class="col-1-2 text-left">
-                <a href="#" class="btn btn-warning square-btn btn-foot-contact2 pad-btn">お仕事をお探しの方</a>
-            </div>
-        </div><!-- grid -->
-    </div> <!-- home-cta -->
+    <?php get_template_part('part_bottom_contact') ?>
 
 </section><!-- #content -->
 

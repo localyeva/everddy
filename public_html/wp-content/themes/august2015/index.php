@@ -8,7 +8,7 @@ get_header();
 ?>
 
 <section id="content" class="site-content">
-    <div class="bg head-img">
+    <div id="fixed-sequence" class="bg head-img">
         <div class="grid grid-pad bg-height">
             <div class="col-2-3 text-left text-left-head">
                 <h1><?php echo get_top_text() ?></h1>
@@ -32,7 +32,7 @@ get_header();
     </div><!-- home-cta -->
 
     <div class="home-cta">
-        <div class=" grid">
+        <div class="grid grid-pad">
 
             <?php
             $args = array(
@@ -106,26 +106,7 @@ get_header();
         </div><!-- grid -->  
     </div><!-- home-cta -->   
 
-    <div class="home-cta padding-cta"> 
-        <div class="grid grid-pad">
-            <div class="col-1-1 text-center">
-                <h2><?php echo get_contact_text() ?></h2>
-            </div><!-- col-10-12 -->                        
-        </div><!-- grid -->
-        <div class="grid grid-pad">
-            <div class="col-1-1 text-center">
-                <?php echo get_contact_descript() ?>
-            </div><!-- col-10-12 -->                        
-        </div><!-- grid -->
-        <div class="grid grid-pad">                        
-            <div class="col-1-1 text-center">
-                <a href="#" class="btn btn-primary square-btn btn-large-text pad-btn" style="margin-right:20px">人材をお探しの企業様</a>                                        
-                <a href="#" class="btn btn-warning square-btn btn-large-text pad-btn">お仕事をお探しの方</a>
-            </div><!-- col-2-12 -->
-        </div><!-- grid -->
-    </div> <!-- home-cta --> 
-
-
+    <?php get_template_part('part_bottom_contact') ?>
 
 </section><!-- #content -->
 
