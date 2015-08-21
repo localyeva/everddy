@@ -59,7 +59,7 @@
                                         <li id="menu-item-2" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a href="#">サービス</a></li>
                                         <li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3"><a href="#">ご利用メリット</a></li>
                                         <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a href="#">外国人採用メリット</a></li>
-                                        <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5"><a href="#">企業概要</a></li>
+                                        <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5"><a href="<?php echo bloginfo('url') ?>/profile">企業概要</a></li>
 
                                         <li id="menu-item-6" class="btn-first-head menu-item menu-item-type-post_type menu-item-object-page menu-item-6 btn-head-pad"><a href="#" class="btn btn-primary square-btn">お問い合わせはこちら</a></li>
 
@@ -81,7 +81,7 @@
                         <li id="menu-item-2" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a href="#">サービス</a></li>
                         <li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3"><a href="#">ご利用メリット</a></li>
                         <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a href="#">外国人採用メリット</a></li>
-                        <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5"><a href="#">企業概要</a></li>
+                        <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5"><a href="<?php echo bloginfo('url') ?>/profile">企業概要</a></li>
 
                         <li id="menu-item-6" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6"  style="margin-right:10px"><a href="#" class="btn btn-primary square-btn">お問い合わせはこちら</a></li>
 

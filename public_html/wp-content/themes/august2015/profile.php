@@ -6,6 +6,7 @@
  */
 
 global $theme_options;
+//var_dump($theme_options);
 
 get_header();
 ?>
@@ -15,7 +16,7 @@ get_header();
     <div id="fixed-sequence" class="bg profile-head-img part-pad">
         <div class="grid grid-pad bg-height">
             <div class="col-2-3 text-left text-left-head">
-                <h1>会社概要/代表メッセージ</h1>      
+                <h1><?php echo get_profile_top_text() ?></h1>      
                 <h3></h3>
             </div>                            
 
@@ -25,6 +26,7 @@ get_header();
         </div><!-- grid -->  
     </div><!-- home-cta -->
 
+    <?php if(get_profile_button_status()): ?>
     <div class="grid grid-pad part-pad top-pad">
         <div class="col-1-2 text-right">
             <a href="#" class="btn btn-strange pad-btn">会社概要</a>
@@ -33,6 +35,7 @@ get_header();
             <a href="#" class="btn btn-strange pad-btn">代表メッセージ</a>
         </div>
     </div><!-- grid -->
+    <?php endif; ?>
 
     <div class="grid grid-pad">
         <div class="col-1-1">
@@ -46,50 +49,40 @@ get_header();
                 </tr>
                 <tr>
                     <th>所在地</th>
-                    <td>〒105-0012<br>
-                        東京都港区芝大門1-10-11　芝大門センタービル10F<br/>
-                        10F Shiba Daimon Centre, 1-10-11 Shiba Daimon, Minato Ku, Tokyo, Japan<br/>
-                        zip: 105-0012<br/><br/>
-                        電話番号: 03-6880-9083<br/>
-                        FAX番号: 03-6880-9201
+                    <td><?php echo $theme_options['ct_com_postal_code'] ?><br>
+                        <?php echo $theme_options['ct_com_address_jp'] ?><br/>
+                        <?php echo $theme_options['ct_com_address_en'] ?><br/>
+                        zip: <?php echo $theme_options['ct_com_zip_code'] ?><br/><br/>
+                        電話番号: <?php echo $theme_options['ct_com_telephone'] ?><br/>
+                        FAX番号: <?php echo $theme_options['ct_com_fax'] ?>
                     </td>
                 </tr>
                 <tr>
                     <th>メール</th>
-                    <td><span class="black-text">info@everddy.com</span></td>
+                    <td><span class="black-text"><?php echo $theme_options['ct_com_email'] ?></span></td>
                 </tr>
                 <tr>
                     <th>設立</th>
-                    <td>平成27年5月27日</td>
+                    <td><?php echo $theme_options['ct_com_establishment'] ?></td>
                 </tr>
                 <tr>
                     <th>資本金</th>
-                    <td>500万円<br/>5,000,000 JPY</td>
+                    <td><?php echo $theme_options['ct_com_capital'] ?><br/><?php echo $theme_options['ct_com_capital_en'] ?></td>
                 </tr>
                 <tr>
                     <th>役員</th>
-                    <td>代表取締役社長　金　明正<br/><span class="black-text">CEO Kim Myung Jeong</span></td>
+                    <td><?php echo $theme_options['ct_com_officer'] ?><br/><span class="black-text"><?php echo $theme_options['ct_com_officer_en'] ?></span></td>
                 </tr>
                 <tr>
                     <th>事業内容</th>
                     <td>
-                        <ul>
-                            <li>人材紹介事業（厚生労働大臣許可番号＠＠＠＠＠＠＠＠＠＠）</li>
-                            <li>人事・採用のコンサルティング事業</li>
-                            <li>総合人材サービス全般</li>
-                            <li>労働者派遣事業</li>
-                            <li>有料職業紹介事業</li>
-                            <li>再就職支援事業</li>
-                            <li>アウトソーシング事業</li>
-                            <li>ITソリューションサービス事業</li>
-                            <li>コンサルティング事業</li>
-                        </ul>
+                        <?php echo $theme_options['ct_com_content'] ?>
                     </td>
                 </tr>
                 <tr>
                     <th>アクセス</th>
                     <td id='map'>
-                        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="443" src="https://maps.google.com/maps?hl=en&q=9 Dinh Tien Hoang, Dakao, Q1, HCM, Viet Nam&ie=UTF8&t=m&z=17&iwloc=B&output=embed"></iframe>
+                        <?php echo stripcslashes($theme_options['ct_com_on_map']) ?>
                     </td>
                 </tr>
             </table>
