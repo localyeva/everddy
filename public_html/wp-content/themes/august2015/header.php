@@ -26,6 +26,7 @@
         <link rel="stylesheet" type="text/css" id="business-style-css" href="<?php echo get_template_directory_uri() ?>/css/style.css" media="all">
         <link rel="stylesheet" type="text/css" id="business-sidr-component-css" href="<?php echo get_template_directory_uri() ?>/css/component.css" media="all">
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/css/bootstrap.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/nanoscroller.css">
         <link rel="stylesheet" type="text/css" id="business-erveddy-css" href="<?php echo get_template_directory_uri() ?>/css/erveddy.css" media="all">
 
         <!--[if lt IE 9]>

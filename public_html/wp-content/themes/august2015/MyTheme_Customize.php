@@ -44,12 +44,6 @@ function theme_customize_register($wp_customize) {
         'priority' => 25,
     ));
 
-    /* PROFILE */
-    $wp_customize->add_section('profile', array(
-        'title' => __('PROFILE'),
-        'priority' => 26,
-    ));
-
     /* ADD SETTING & CONTROL */
     /* TOP */
     $wp_customize->add_setting('top_image', array(
@@ -195,39 +189,6 @@ function theme_customize_register($wp_customize) {
         'priority' => 1,
         'type' => 'textarea',
     ));
-
-    /* PROFILE */
-    $wp_customize->add_setting('profile_top_image', array(
-        'default' => ''
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'profile_top_image_c', array(
-        'label' => __('Profile Top Image'),
-        'section' => 'profile',
-        'settings' => 'profile_top_image',
-        'priority' => 1,
-    )));
-
-    $wp_customize->add_setting('profile_top_text', array(
-        'default' => '',
-    ));
-    $wp_customize->add_control('profile_top_text_c', array(
-        'label' => __('Profile Top text'),
-        'section' => 'profile',
-        'settings' => 'profile_top_text',
-        'priority' => 1,
-        'type' => 'text',
-    ));
-    
-    $wp_customize->add_setting('profile_button_status', array(
-        'default' => '',
-    ));
-    $wp_customize->add_control('profile_button_status_c', array(
-        'label' => __('Show / Hide buttons'),
-        'section' => 'profile',
-        'settings' => 'profile_button_status',
-        'priority' => 1,
-        'type' => 'checkbox',
-    ));
 }
 
 add_action('customize_register', 'theme_customize_register');
@@ -241,10 +202,6 @@ function generate_css() {
         }
         .foot-img{
             background: url("<?php echo get_benefit_foreign_image_bg() ?>") no-repeat scroll 50% 50% / cover;
-        }
-        
-        .profile-head-img{
-            background: url("<?php echo get_profile_top_image() ?>") no-repeat scroll center center / 100% auto;
         }
     </style>
     <?php
@@ -323,16 +280,4 @@ function get_contact_descript() {
     $description = get_theme_mod('contact_descript');
     //
     return convert_newline($description, '<p class="blur-black">', '</p>');
-}
-
-/* PROFILE */
-
-function get_profile_top_image() {
-    return esc_url(get_theme_mod('profile_top_image'));
-}
-function get_profile_top_text() {
-    return get_theme_mod('profile_top_text');
-}
-function get_profile_button_status() {
-    return get_theme_mod('profile_button_status');
 }

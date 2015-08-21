@@ -28,6 +28,9 @@
 </div><!-- #page -->        
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/js/jquery.rwdImageMaps.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/js/jquery.nanoscroller.min.js"></script>        
+<script src="<?php echo get_template_directory_uri() ?>/js/jquery.overthrow.min.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/js/modernizr.js"></script> <!-- Modernizr -->
 <script src="<?php echo get_template_directory_uri() ?>/js/main.js"></script> <!-- Modernizr -->
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/classie.js"></script>
