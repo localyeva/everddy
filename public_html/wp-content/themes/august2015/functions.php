@@ -14,14 +14,16 @@ include_once (dirname(__FILE__) . '/MyTheme_Customize_Profile.php');
 include_once (dirname(__FILE__) . '/MyTheme_Customize_Contact_1.php');
 include_once (dirname(__FILE__) . '/MyTheme_Customize_Contact_2.php');
 include_once (dirname(__FILE__) . '/MyTheme_Customize_Service_Detail.php');
+include_once (dirname(__FILE__) . '/MyTheme_Customize_Service_Feature.php');
 include_once(dirname(__FILE__) . '/cpt_acf_definitions.php');
 
 /* -------------------------------------------------------------------------- */
-add_action('admin_enqueue_scripts', 'admin_js');
 
-function admin_js() {
-    wp_enqueue_script('admin-custom-script', get_template_directory_uri() . '/js/admin/custom.js');
+function my_enqueue($hook) {
+    wp_enqueue_script('my_custom_script', get_template_directory_uri() . '/js/admin/custom.js', array('plugin'));
 }
+
+add_action('admin_enqueue_scripts', 'my_enqueue');
 
 /* -------------------------------------------------------------------------- */
 add_action('init', 'myStartSession', 1);
@@ -38,6 +40,10 @@ add_action('wp_print_scripts', 'scripts');
 function scripts() {
     if (is_page('contact')) {
         wp_enqueue_script('js-validate', get_template_directory_uri() . '/js/jquery.validate.min.js', array(), '1.14.0', TRUE);
+    }
+    
+    if (is_page('service-feature')){
+        wp_enqueue_script('js-business', get_template_directory_uri() . '/js/business.scripts.js', array(), '1.0.0', TRUE);
     }
 }
 

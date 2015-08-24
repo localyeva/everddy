@@ -58,7 +58,7 @@
                                     <ul id="menu-menu-1" class="menu">
                                         <li id="menu-item-1" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1"><a href="<?php echo bloginfo('url') ?>">ホーム</a></li>
                                         <li id="menu-item-2" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a href="<?php echo bloginfo('url') ?>/service-detail">サービス</a></li>
-                                        <li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3"><a href="<?php echo bloginfo('url') ?>/merit">ご利用メリット</a></li>
+                                        <li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3"><a href="<?php echo bloginfo('url') ?>/service-feature">ご利用メリット</a></li>
                                         <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a href="<?php echo bloginfo('url') ?>/benefit">外国人採用メリット</a></li>
                                         <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5"><a href="<?php echo bloginfo('url') ?>/profile">企業概要</a></li>
 
@@ -80,7 +80,7 @@
                     <ul id="menu-menu-2" class="menu">
                         <li id="menu-item-1" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1"><a href="<?php echo bloginfo('url') ?>">ホーム</a></li>
                         <li id="menu-item-2" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a href="<?php echo bloginfo('url') ?>/service-detail">サービス</a></li>
-                        <li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3"><a href="<?php echo bloginfo('url') ?>/merit">ご利用メリット</a></li>
+                        <li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3"><a href="<?php echo bloginfo('url') ?>/service-feature">ご利用メリット</a></li>
                         <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a href="<?php echo bloginfo('url') ?>/benefit">外国人採用メリット</a></li>
                         <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5"><a href="<?php echo bloginfo('url') ?>/profile">企業概要</a></li>
 

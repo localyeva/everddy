@@ -37,8 +37,8 @@ get_header();
                         <?php }?>
                         <?php the_title() ?>
                     </h1>    
-                </div>
-                <?php echo get_field('content') ?>
+                    <?php echo get_field('content') ?>
+                </div>                
             </div>
         <?php $xid++; endwhile; ?>
     <?php endif; ?>
@@ -46,7 +46,7 @@ get_header();
 
     <div class="grid grid-pad">
         <div class="col-1-1 text-center">
-            <a href="<?php echo bloginfo('url') ?>/merit" class="btn btn-success square-btn btn-detail-green pad-btn">弊社サービスの特徴はこちら</a>
+            <a href="<?php echo bloginfo('url') ?>/service-feature" class="btn btn-success square-btn btn-detail-green pad-btn">弊社サービスの特徴はこちら</a>
         </div>
     </div>
     <?php get_template_part('part_bottom_contact') ?>

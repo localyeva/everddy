@@ -22,7 +22,7 @@
                 </p>
             </div>
             <div class = "home-point">
-                <a href="<?php echo bloginfo('url') ?>/merit">
+                <a href="<?php echo bloginfo('url') ?>/service-feature">
                     <button class = "btn btn-warning btn-service">
                         <span>詳細はこちら</span>
                         <img src = "<?php echo get_template_directory_uri() ?>/img/arrow.png"/>
