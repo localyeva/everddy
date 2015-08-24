@@ -83,9 +83,33 @@ function cptui_register_my_cpts() {
         "query_var" => true,
         "menu_position" => 28,
         "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h3.png',
-        "supports" => array("title", "editor"),
+        "supports" => array("title"),
     );
     register_post_type("service-feature", $args);
+
+    $labels = array(
+        "name" => "Benefit",
+        "singular_name" => "Benefit",
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "show_ui" => true,
+        "has_archive" => false,
+        "show_in_menu" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array("slug" => "benefit", "with_front" => true),
+        "query_var" => true,
+        "menu_position" => 29,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h4.png',
+        "supports" => array("title"),
+    );
+    register_post_type("benefit", $args);
 
 // End of cptui_register_my_cpts()
 }
@@ -204,12 +228,21 @@ if (function_exists("register_field_group")) {
         'fields' => array(
             array(
                 'key' => 'field_55cd925987c9e',
-                'label' => 'Icon',
-                'name' => 'icon',
+                'label' => 'Image Number',
+                'name' => 'image_number',
                 'type' => 'image',
                 'save_format' => 'url',
                 'preview_size' => 'thumbnail',
                 'library' => 'all',
+            ),
+            array(
+                'key' => 'field_55da796468490',
+                'label' => 'Content',
+                'name' => 'content',
+                'type' => 'wysiwyg',
+                'default_value' => '',
+                'toolbar' => 'full',
+                'media_upload' => 'yes',
             ),
             array(
                 'key' => 'field_55cd926987c9f',
@@ -250,6 +283,49 @@ if (function_exists("register_field_group")) {
                     'param' => 'post_type',
                     'operator' => '==',
                     'value' => 'service-feature',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array(
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array(
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+
+    register_field_group(array(
+        'id' => 'acf_benefits',
+        'title' => 'Benefits',
+        'fields' => array(
+            array(
+                'key' => 'field_55da7a34ad0f7',
+                'label' => 'Image Number',
+                'name' => 'image_number',
+                'type' => 'image',
+                'save_format' => 'url',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+            array(
+                'key' => 'field_55da7a80ad0f8',
+                'label' => 'Content',
+                'name' => 'content',
+                'type' => 'wysiwyg',
+                'default_value' => '',
+                'toolbar' => 'full',
+                'media_upload' => 'yes',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'benefit',
                     'order_no' => 0,
                     'group_no' => 0,
                 ),
