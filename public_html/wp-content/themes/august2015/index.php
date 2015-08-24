@@ -48,8 +48,8 @@ get_header();
                         <div class="home-blog">
                             <article id="post-12" class="post-12 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
                                 <header class="home-entry-header">
-                                    <a href="javascript:void(0)">
-                                        <img class="attachment-home-blog wp-post-image img-responsive" width="251" height="303" src="<?php echo get_field('image') ?>" alt="<?php echo get_the_title() ?>" />
+                                    <a href="<?php echo bloginfo('url') ?>/service-detail">
+                                        <img class="attachment-home-blog wp-post-image img-responsive" src="<?php echo get_field('image') ?>" alt="<?php echo get_the_title() ?>" />
                                     </a>
                                 </header>
                             </article>
@@ -95,7 +95,7 @@ get_header();
                 <h1><?php echo get_benefit_foreign_text() ?></h1>
                 <hr/>
                 <?php echo get_benefit_foreign_descript() ?>
-                <a>
+                <a href="<?php echo bloginfo('url') ?>/benefit">
                     <button class="btn btn-foot">
                         <span>詳細はこちら</span>
                         <i class="eve-arrow"></i>

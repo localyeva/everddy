@@ -13,6 +13,7 @@ include_once (dirname(__FILE__) . '/MyTheme_Customize.php');
 include_once (dirname(__FILE__) . '/MyTheme_Customize_Profile.php');
 include_once (dirname(__FILE__) . '/MyTheme_Customize_Contact_1.php');
 include_once (dirname(__FILE__) . '/MyTheme_Customize_Contact_2.php');
+include_once (dirname(__FILE__) . '/MyTheme_Customize_Service_Detail.php');
 include_once(dirname(__FILE__) . '/cpt_acf_definitions.php');
 
 /* -------------------------------------------------------------------------- */
