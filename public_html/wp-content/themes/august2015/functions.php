@@ -16,6 +16,13 @@ include_once (dirname(__FILE__) . '/MyTheme_Customize_Contact_2.php');
 include_once(dirname(__FILE__) . '/cpt_acf_definitions.php');
 
 /* -------------------------------------------------------------------------- */
+add_action('admin_enqueue_scripts', 'admin_js');
+
+function admin_js() {
+    wp_enqueue_script('admin-custom-script', get_template_directory_uri() . '/js/admin/custom.js');
+}
+
+/* -------------------------------------------------------------------------- */
 add_action('init', 'myStartSession', 1);
 
 // init session id
@@ -67,26 +74,26 @@ function add_custom_script() {
     }
 
     // Custom Script
-    if (isset($theme_options['ct_use_script']) && $theme_options['ct_use_script']){
+    if (isset($theme_options['ct_use_script']) && $theme_options['ct_use_script']) {
         if (isset($theme_options['ct_custom_script'])) {
             $script .= $theme_options['ct_custom_script'];
         }
     }
-    
+
     echo $script;
 }
 
 add_action('wp_head', 'add_custom_css');
 
-function add_custom_css(){
+function add_custom_css() {
     global $theme_options;
     $css = '<style id="custom-css">';
-    
-    if (isset($theme_options['ct_use_css']) && $theme_options['ct_use_css']){
+
+    if (isset($theme_options['ct_use_css']) && $theme_options['ct_use_css']) {
         $css .= $theme_options['ct_custom_css'];
     }
-    
+
     $css .= '</style>';
-    
+
     echo $css;
 }
