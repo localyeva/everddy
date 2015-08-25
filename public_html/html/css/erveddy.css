@@ -334,7 +334,7 @@ h1 {
   padding-left: 10px;
 }
 #part3 .col-height {
-  height: 600px;
+  height: 800px;
   width: 100%;
   padding: 30px;
 }
@@ -383,7 +383,7 @@ h1 {
   font-size: 19px;
   line-height: 1.42857;
   border-radius: 4px;
-  width: 300px;
+  width: 100%;
 }
 #part3 .center {
   position: absolute;
