@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<section id="detail" class="site-content">
+<section id="feature" class="site-content">
     <div id="fixed-sequence" class="bg merit-head-img part-pad">
         <div class="grid grid-pad bg-height">
             <div class="col-2-3 text-left text-left-head">
