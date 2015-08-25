@@ -11,10 +11,10 @@
     </div><!-- grid -->
     <div class="grid grid-pad">                        
         <div class="col-1-2 text-right">
-            <a href="<?php echo bloginfo('url') ?>/contact_1" class="btn btn-primary square-btn btn-foot-contact1 pad-btn">人材をお探しの企業様</a>
+            <a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn btn-foot-contact1 pad-btn">人材をお探しの企業様</a>
         </div>
         <div class="col-1-2 text-left">
-            <a href="<?php echo bloginfo('url') ?>/contact_2" class="btn btn-warning square-btn btn-foot-contact2 pad-btn">お仕事をお探しの方</a>
+            <a href="<?php echo bloginfo('url') ?>/contact-job" class="btn btn-warning square-btn btn-foot-contact2 pad-btn">お仕事をお探しの方</a>
         </div>
     </div><!-- grid -->
 </div> <!-- home-cta -->

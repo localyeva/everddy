@@ -62,9 +62,9 @@
                                         <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a href="<?php echo bloginfo('url') ?>/benefit">外国人採用メリット</a></li>
                                         <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5"><a href="<?php echo bloginfo('url') ?>/profile">企業概要</a></li>
 
-                                        <li id="menu-item-6" class="btn-first-head menu-item menu-item-type-post_type menu-item-object-page menu-item-6 btn-head-pad"><a href="<?php echo bloginfo('url') ?>/contact_1" class="btn btn-primary square-btn">お問い合わせはこちら</a></li>
+                                        <li id="menu-item-6" class="btn-first-head menu-item menu-item-type-post_type menu-item-object-page menu-item-6 btn-head-pad"><a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn">お問い合わせはこちら</a></li>
 
-                                        <li id="menu-item-7" class="btn-second-head menu-item menu-item-type-post_type menu-item-object-page menu-item-7 btn-head-pad"><a href="<?php echo bloginfo('url') ?>/contact_2" class="btn btn-warning square-btn pad-btn btn-contact-width">お仕事をお探しの方</a></li>
+                                        <li id="menu-item-7" class="btn-second-head menu-item menu-item-type-post_type menu-item-object-page menu-item-7 btn-head-pad"><a href="<?php echo bloginfo('url') ?>/contact-job" class="btn btn-warning square-btn pad-btn btn-contact-width">お仕事をお探しの方</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -84,9 +84,9 @@
                         <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a href="<?php echo bloginfo('url') ?>/benefit">外国人採用メリット</a></li>
                         <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5"><a href="<?php echo bloginfo('url') ?>/profile">企業概要</a></li>
 
-                        <li id="menu-item-6" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6"  style="margin-right:10px"><a href="<?php echo bloginfo('url') ?>/contact_1" class="btn btn-primary square-btn">お問い合わせはこちら</a></li>
+                        <li id="menu-item-6" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6"  style="margin-right:10px"><a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn">お問い合わせはこちら</a></li>
 
-                        <li id="menu-item-7" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7"><a href="<?php echo bloginfo('url') ?>/contact_2" class="btn btn-warning square-btn pad-btn">お仕事をお探しの方</a></li>
+                        <li id="menu-item-7" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7"><a href="<?php echo bloginfo('url') ?>/contact-job" class="btn btn-warning square-btn pad-btn">お仕事をお探しの方</a></li>
 
                     </ul>
                 </div>		

@@ -3,7 +3,7 @@
     <div class="col-1-1">
         <h2 class='pad'><?php echo get_contact_text() ?></h2>
         <h4>人材をお探しの企業様</h4>
-        <p class='pad'><a href="<?php echo bloginfo('url') ?>/contact_1" class="btn btn-primary square-btn pad-btn">お問い合わせはこちら</a></p>
+        <p class='pad'><a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn pad-btn">お問い合わせはこちら</a></p>
         <h4>日本でお仕事をお探しの方</h4>
         <p class='pad'><a href="<?php echo bloginfo('url') ?>/service-feature" class="btn btn-warning square-btn pad-btn btn-contact-width">ご相談はこちら</a></p>
         <h4>日本国外でお仕事をお探しの方</h4>

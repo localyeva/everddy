@@ -1,7 +1,7 @@
 <?php
 /*
  * Author: KhangLe
- * Template Name: Contact_2
+ * Template Name: Contact Job
  * 
  */
 
@@ -15,7 +15,7 @@ get_header();
     <div id="fixed-sequence" class="bg contact2-head-img part-pad">
         <div class="grid grid-pad bg-height">
             <div class="col-2-3 text-left text-left-head">
-                <h1><?php echo get_contact_2_top_text() ?></h1>
+                <h1><?php echo get_contact_job_top_text() ?></h1>
             </div>
 
             <?php get_template_part('part_top_contact') ?>
@@ -43,7 +43,15 @@ get_header();
 
     <div class="grid grid-pad">
         <div class="col-1-1 text-center">
-            <a href="#" class="btn btn-warning btn-contact1">同意して送信</a>
+            <a href="mailto:<?php echo $theme_options['ct_com_email'] ?>?subject=【求人のご依頼】&body=
+■御社名:%0D%0A
+■御社ホームページURL:%0D%0A
+■部署名:%0D%0A
+■お役職名:%0D%0A
+■お名前:%0D%0A
+■ご連絡先TEL、E-mail:%0D%0A
+■ご相談内容:%0D%0A
+■お問い合わせのきっかけ(当社をお知りになったきっかけ):%0D%0A" class="btn btn-warning btn-contact1">同意して送信</a>
         </div>
         <div class="col-1-1">
             <p class="blur-black"><span class="green">※ </span>ウェブメーラー等を使用しており、デバイスにメーラー設定を行っていない方は、プライバシーポリシーに同意の上、<span class="black-text"><?php echo $theme_options['ct_com_email'] ?></span>宛に、ご連絡お願いいたします。 <br/>
