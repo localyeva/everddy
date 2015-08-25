@@ -17,6 +17,7 @@ function cptui_register_my_cpts() {
     $labels = array(
         "name" => "Service",
         "singular_name" => "Service",
+        "menu_name" => "[T] Our Services",
     );
 
     $args = array(
@@ -39,6 +40,31 @@ function cptui_register_my_cpts() {
     register_post_type("service", $args);
 
     $labels = array(
+        "name" => "Service Merit",
+        "singular_name" => "Service Merit",
+        "menu_name" => "[T] Service Merit",
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "show_ui" => true,
+        "has_archive" => false,
+        "show_in_menu" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array("slug" => "service-merit", "with_front" => true),
+        "query_var" => true,
+        "menu_position" => 27,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h2.png',
+        "supports" => array("title"),
+    );
+    register_post_type("service-merit", $args);
+
+    $labels = array(
         "name" => "Service Detail",
         "singular_name" => "Service Detail",
     );
@@ -56,12 +82,11 @@ function cptui_register_my_cpts() {
         "hierarchical" => false,
         "rewrite" => array("slug" => "service-detail", "with_front" => true),
         "query_var" => true,
-        "menu_position" => 27,
-        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h2.png',
+        "menu_position" => 28,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h3.png',
         "supports" => array("title"),
     );
     register_post_type("service-detail", $args);
-
 
     $labels = array(
         "name" => "Service Feature",
@@ -81,8 +106,8 @@ function cptui_register_my_cpts() {
         "hierarchical" => false,
         "rewrite" => array("slug" => "service-feature", "with_front" => true),
         "query_var" => true,
-        "menu_position" => 28,
-        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h3.png',
+        "menu_position" => 29,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h4.png',
         "supports" => array("title"),
     );
     register_post_type("service-feature", $args);
@@ -105,8 +130,8 @@ function cptui_register_my_cpts() {
         "hierarchical" => false,
         "rewrite" => array("slug" => "benefit", "with_front" => true),
         "query_var" => true,
-        "menu_position" => 29,
-        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h4.png',
+        "menu_position" => 30,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h5.png',
         "supports" => array("title"),
     );
     register_post_type("benefit", $args);
@@ -165,6 +190,61 @@ if (function_exists("register_field_group")) {
                     'param' => 'post_type',
                     'operator' => '==',
                     'value' => 'service',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array(
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array(
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+
+    register_field_group(array(
+        'id' => 'acf_service-merit',
+        'title' => 'Service Merit',
+        'fields' => array(
+            array(
+                'key' => 'field_55dbedb8030ed',
+                'label' => 'Image',
+                'name' => 'image',
+                'type' => 'image',
+                'save_format' => 'url',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+            array(
+                'key' => 'field_55dbedcd030ee',
+                'label' => 'Content',
+                'name' => 'content',
+                'type' => 'wysiwyg',
+                'default_value' => '',
+                'toolbar' => 'full',
+                'media_upload' => 'yes',
+            ),
+            array(
+                'key' => 'field_55dbeec60da6a',
+                'label' => 'Redirect Url',
+                'name' => 'redirect_url',
+                'type' => 'text',
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'none',
+                'maxlength' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'service-merit',
                     'order_no' => 0,
                     'group_no' => 0,
                 ),

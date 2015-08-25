@@ -124,15 +124,15 @@ function theme_customize_register($wp_customize) {
         'type' => 'text',
     ));
 
-    $wp_customize->add_setting('benefit_service_image', array(
-        'default' => ''
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'benefit_service_image_c', array(
-        'label' => __('Image'),
-        'section' => 'benefit_service',
-        'settings' => 'benefit_service_image',
-        'priority' => 1,
-    )));
+//    $wp_customize->add_setting('benefit_service_image', array(
+//        'default' => ''
+//    ));
+//    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'benefit_service_image_c', array(
+//        'label' => __('Image'),
+//        'section' => 'benefit_service',
+//        'settings' => 'benefit_service_image',
+//        'priority' => 1,
+//    )));
 
     /* BENEFITS OF FOREIGN ADOPTION */
     $wp_customize->add_setting('benefit_foreign_image_bg', array(
@@ -249,9 +249,9 @@ function get_benefit_service_text() {
     return get_theme_mod('benefit_service_text');
 }
 
-function get_benefit_service_image() {
-    return esc_url(get_theme_mod('benefit_service_image'));
-}
+//function get_benefit_service_image() {
+//    return esc_url(get_theme_mod('benefit_service_image'));
+//}
 
 /* BENEFITS OF FOREIGN ADOPTION */
 

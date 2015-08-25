@@ -48,12 +48,14 @@ get_header();
                         <div class="home-blog">
                             <article id="post-12" class="post-12 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
                                 <header class="home-entry-header">
-                                    <a href="<?php echo bloginfo('url') ?>/service-detail">
+                                    <a href="<?php echo bloginfo('url') ?>/<?php echo get_field('redirect_url') ?>">
                                         <img class="attachment-home-blog wp-post-image img-responsive" src="<?php echo get_field('image') ?>" alt="<?php echo get_the_title() ?>" />
                                     </a>
                                 </header>
                             </article>
-                            <h4><?php the_title() ?></h4>
+                            <h4>
+                                <a href="<?php echo bloginfo('url') ?>/<?php echo get_field('redirect_url') ?>"><?php the_title() ?></a>
+                            </h4>
                             <p class="blur-black">
                                 <?php echo get_field('short_description') ?>
                             </p>
@@ -61,7 +63,7 @@ get_header();
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>
-            
+
         </div><!-- grid -->  
     </div><!-- home-cta -->
 
@@ -73,21 +75,49 @@ get_header();
         </div><!-- grid -->  
     </div><!-- home-cta -->
 
-    <div class="home-services home-service-padding">
-        <div class="grid home-divider-1">
-            <div class="col-1-2"> 
-                <aside id="text-4" class="widget widget_text">			
-                    <div class="textwidget">
-                        <img class="aligncenter img-responsive" src="<?php echo get_benefit_service_image() ?>" width="82%" />
-                    </div>
-                </aside>        		
-            </div><!-- col-1-2 -->
+    <?php
+    $args = array(
+        'post_type' => 'service-merit',
+        'posts_per_page' => 1,
+        'orderby' => array('date' => 'DESC'),
+    );
+    $loop = new WP_Query($args);
+    ?>
+    <?php if ($loop->have_posts()): ?>
+        <?php while ($loop->have_posts()): $loop->the_post(); ?>
+            <div class="home-services home-service-padding">
+                <div class="grid home-divider-1">
+                    <div class="col-1-2"> 
+                        <aside id="text-4" class="widget widget_text">			
+                            <div class="textwidget">
+                                <img class="aligncenter img-responsive" src="<?php echo get_field('image') ?>" width="82%" />
+                            </div>
+                        </aside>        		
+                    </div><!-- col-1-2 -->
 
-            <?php get_template_part('part_service_benefits') ?>
+                    <div class = "col-1-2">
+                        <aside id = "text-3" class = "widget widget_text">
+                            <div class = "textwidget">
+                                <?php echo get_field('content') ?>
+                                <div class = "home-point">
+                                    <a href="<?php echo bloginfo('url') ?>/<?php echo get_field('redirect_url') ?>">
+                                        <button class = "btn btn-warning btn-service">
+                                            <span>詳細はこちら</span>
+                                            <img src = "<?php echo get_template_directory_uri() ?>/img/arrow.png"/>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </aside>
+                    </div><!--col-1-2 -->  
 
-        </div><!-- grid -->
+                    <?php // get_template_part('part_service_benefits') ?>
 
-    </div><!-- home-services -->
+                </div><!-- grid -->
+
+            </div><!-- home-services -->
+        <?php endwhile; ?>
+    <?php endif; ?>
 
     <div class="bg foot-img">
         <div class="grid grid-pad bg-height">
