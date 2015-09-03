@@ -59,7 +59,7 @@
 
                                         <li id="menu-item-6" class="btn-first-head menu-item menu-item-type-post_type menu-item-object-page menu-item-6 btn-head-pad"><a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn">お問い合わせはこちら</a></li>
 
-                                        <li id="menu-item-7" class="btn-second-head menu-item menu-item-type-post_type menu-item-object-page menu-item-7 btn-head-pad"><a href="<?php echo bloginfo('url') ?>/contact-job" class="btn btn-warning square-btn pad-btn btn-contact-width">お仕事をお探しの方</a></li>
+                                        <li id="menu-item-7" class="btn-second-head menu-item menu-item-type-post_type menu-item-object-page menu-item-7 btn-head-pad"><a href="<?php echo bloginfo('url') ?>/contact-job" class="btn btn-warning square-btn pad-btn btn-contact-width">求職のご相談はこちら</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
 
                         <li id="menu-item-6" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6 <?php echo $active_menu ?>"  style="margin-right:10px"><a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn">お問い合わせはこちら</a></li>
 
-                        <li id="menu-item-7" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/contact-job" class="btn btn-warning square-btn pad-btn">お仕事をお探しの方</a></li>
+                        <li id="menu-item-7" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/contact-job" class="btn btn-warning square-btn pad-btn">求職のご相談はこちら</a></li>
 
                     </ul>
                 </div>		
