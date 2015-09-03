@@ -7,17 +7,10 @@
 
         <link type="image/x-icon" href="<?php echo get_template_directory_uri() ?>/images/evaicon.png" rel="shortcut icon">
 
-        <meta content="Evolable Asia" name="author">
-        <meta content="Trang tuyển dụng Evolable Asia" itemprop="description" name="description">
-        <meta content="tuyển dụng,Evolable Asia,developer,BSE,BPO,communicator,jobs,japan,recruitment,lập trình,phiên dịch tiếng Nhật,web,di động,kỹ sư cầu nối" itemprop="keywords" name="keywords">
-
-        <meta content="795903230445450" property="fb:app_id">
-        <meta content="website" property="og:type">
-        <meta content="http://jobs.evolable.asia/" property="og:url">
-        <meta content="Evolable Asia - Tuyển dụng" property="og:site_name">
-        <meta content="" property="og:title">
-        <meta content="http://jobs.evolable.asia/uploaded/images/source/fb_share.png?123456" property="og:image">
-        <meta content="" property="og:description">
+        <meta content="Everddy Co.,Ltd." name="author">
+        <meta content="IT/Web業界の人材やグローバル人材の紹介ならエバディ。" itemprop="title" name="title">
+        <meta content="国内外の優秀な人材をご紹介いたします。御社の成長戦略実現をサポートさせていただくパートナーとして、単なる人材の紹介に留まらず、採用計画・人材配置・外国人採用定着のノウハウなど、人事戦略全般についてご相談を承ります。" itemprop="description" name="description">
+        <meta content="転職、求人、中途採用、ITエンジニア、Webエンジニア、グローバル人材、外国人採用、java、php、エバディ、everddy" itemprop="keywords" name="keywords">
 
         <title><?php echo wp_title() ?></title>
 
