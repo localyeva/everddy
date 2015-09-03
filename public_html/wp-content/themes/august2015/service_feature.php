@@ -37,7 +37,7 @@ get_header();
             <div class="grid grid-pad <?php echo $xid == $num_posts?'last-part-pad' : 'part-pad' ?>" id='<?php echo $xid == 0 ? 'part0' : 'part' . $xid ?>'>
                 <div class="col-1-1">
                     <h1 class="number-title">
-                        <?php if (!empty(get_field('image_number'))) { ?>
+                        <?php if (get_field('image_number') != '') { ?>
                             <img src='<?php echo get_field('image_number') ?>' class='img-pad'/>
                         <?php } ?>
                         <?php the_title() ?>
