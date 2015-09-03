@@ -97,27 +97,76 @@ function add_custom_css() {
     echo $css;
 }
 
+/* ---------------------------------------------------------------------Title */
+
+function set_wp_title($title, $sep) {
+    global $page, $paged;
+
+    if (is_feed()) {
+        return $title;
+    }
+
+    // Add the site name.
+    $title .= get_bloginfo('name');
+
+    if (is_front_page() || is_home()) {
+        $title = "TOP $sep $title";
+    } else {
+
+        if (is_page()) {
+            if (is_page('service-detail')) {
+                $title = "service-detail $sep $title";
+            }
+
+            if (is_page('service-feature')) {
+                $title = "service-feature $sep $title";
+            }
+
+
+            if (is_page('benefit')) {
+                $title = "benefit $sep $title";
+            }
+
+
+            if (is_page('profile')) {
+                $title = "profile $sep $title";
+            }
+
+            if (is_page('contact')) {
+                $title = "contact $sep $title";
+            }
+
+            if (is_page('contact-job')) {
+                $title = "contact-job $sep $title";
+            }
+        }
+    }
+
+    return $title;
+}
+
+add_filter('wp_title', 'set_wp_title', 10, 2);
+
 /* -------------------------------------------------------------- Active Menu */
 add_action('wp_head', 'set_active_menu', 10);
 
 $active_menus = array();
 
-function set_active_menu() {    
+function set_active_menu() {
     global $active_menus;
 
-    $active_menus = array('home'=>'', 'service-feature'=>'', 'service-detail'=>'', 'benefit'=>'', 'profile'=>'');
+    $active_menus = array('home' => '', 'service-feature' => '', 'service-detail' => '', 'benefit' => '', 'profile' => '');
     if (is_front_page() || is_home()) {
         $active_menus['home'] = 'current_page_item';
-    }else if(is_page('service-feature')){
+    } else if (is_page('service-feature')) {
         $active_menus['service-feature'] = 'current_page_item';
-    }else if(is_page('service-detail')){
+    } else if (is_page('service-detail')) {
         $active_menus['service-detail'] = 'current_page_item';
-    }else if(is_page('benefit')){
+    } else if (is_page('benefit')) {
         $active_menus['benefit'] = 'current_page_item';
-    }else if(is_page('profile')){
+    } else if (is_page('profile')) {
         $active_menus['profile'] = 'current_page_item';
     }
-    
 }
 
 /* -------------------------------------------------------------------------- */

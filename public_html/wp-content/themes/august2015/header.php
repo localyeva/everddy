@@ -19,7 +19,7 @@
         <meta content="http://jobs.evolable.asia/uploaded/images/source/fb_share.png?123456" property="og:image">
         <meta content="" property="og:description">
 
-        <title><?php echo bloginfo('name') ?></title>
+        <title><?php echo wp_title() ?></title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" id="prefix-font-awesome-css" href="<?php echo get_template_directory_uri() ?>/css/font-awesome.min.css" media="all">
