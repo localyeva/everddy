@@ -2,21 +2,24 @@
 body {
   background-color: #f1f1f1;
 }
+a {
+  color: #212737;
+}
 .main-navigation li {
   padding-right: 10px;
 }
 .main-navigation a.btn {
   display: block;
   text-decoration: none;
-  padding: 0px 12px;
-  height: 25px;
+  padding: 6px 12px;
+  height: 35px;
   color: #ffffff;
 }
 .main-navigation li:hover > a.btn {
   color: #ffffff;
 }
 .main-navigation .btn-head-pad {
-  padding-top: 7px;
+  padding-top: 0px;
 }
 .main-navigation .btn-first-head {
   padding-left: 5px;
@@ -294,15 +297,20 @@ h1 {
 }
 .number-title {
   color: #00a04c;
+  font-size: 30px;
+}
+.number-title img {
+  width: 50px;
+  height: 50px;
 }
 .part-pad {
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 .last-part-pad {
   padding-bottom: 20px;
 }
 .img-pad {
-  padding-right: 25px;
+  margin-right: 25px;
 }
 #part0 {
   padding-top: 40px;
@@ -512,6 +520,10 @@ ul {
   .btn-xs-headbox {
     display: block !important;
   }
+  .text-left-head {
+    padding-right: 35px;
+    width: 100%;
+  }
   .text-left-head h1 {
     font-size: 40px !important;
     line-height: 35px;
@@ -525,5 +537,14 @@ ul {
   }
   .foot-contact .grid .text-left {
     text-align: center;
+  }
+}
+@media (max-width: 1080px) {
+  .number-title {
+    font-size: 20px;
+  }
+  .number-title img {
+    width: 40px;
+    height: 40px;
   }
 }
