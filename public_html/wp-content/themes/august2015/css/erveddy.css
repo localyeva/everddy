@@ -3,10 +3,10 @@ body {
   background-color: #f1f1f1;
 }
 a {
-  color: #212737;
+  outline: none !important;
 }
 .main-navigation li {
-  padding-right: 10px;
+  padding-right: 5px;
 }
 .main-navigation a.btn {
   display: block;
@@ -31,7 +31,7 @@ a {
   height: 60px;
 }
 .grid-head {
-  max-width: 1440px;
+  max-width: 1366px;
 }
 .head-img {
   -webkit-background-size: cover;
