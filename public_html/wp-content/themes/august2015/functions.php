@@ -98,9 +98,25 @@ function add_custom_css() {
 }
 
 /* -------------------------------------------------------------- Active Menu */
-add_action('init', 'set_active_menu', 10);
+add_action('wp_head', 'set_active_menu', 10);
 
-function set_active_menu() {
+$active_menus = array();
+
+function set_active_menu() {    
+    global $active_menus;
+
+    $active_menus = array('home'=>'', 'service-feature'=>'', 'service-detail'=>'', 'benefit'=>'', 'profile'=>'');
+    if (is_front_page() || is_home()) {
+        $active_menus['home'] = 'current_page_item';
+    }else if(is_page('service-feature')){
+        $active_menus['service-feature'] = 'current_page_item';
+    }else if(is_page('service-detail')){
+        $active_menus['service-detail'] = 'current_page_item';
+    }else if(is_page('benefit')){
+        $active_menus['benefit'] = 'current_page_item';
+    }else if(is_page('profile')){
+        $active_menus['profile'] = 'current_page_item';
+    }
     
 }
 
