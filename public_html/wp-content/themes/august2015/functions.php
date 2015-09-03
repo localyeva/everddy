@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Author: KhangLe
  * 
@@ -97,3 +96,32 @@ function add_custom_css() {
 
     echo $css;
 }
+
+/* * *************************************************************************** */
+
+function my_login_logo() {
+    ?>
+    <style type="text/css">
+        .login h1 a {
+            background-image: url(<?php echo get_template_directory_uri(); ?>/img/logo.png);
+            width: 326px;
+            height: 56px;
+            background-size: auto;
+        }
+    </style>
+    <?php
+}
+
+add_action('login_enqueue_scripts', 'my_login_logo');
+
+function my_login_logo_url() {
+    return home_url();
+}
+
+add_filter('login_headerurl', 'my_login_logo_url');
+
+function my_login_logo_url_title() {
+    return 'Power by Everddy Co.,Ltd.';
+}
+
+add_filter('login_headertitle', 'my_login_logo_url_title');
