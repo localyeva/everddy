@@ -6,7 +6,6 @@
  */
 
 global $theme_options;
-//var_dump($theme_options);
 
 get_header();
 ?>

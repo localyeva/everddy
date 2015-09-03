@@ -34,25 +34,22 @@ get_header();
 
     <div id="about" class="grid grid-pad-nano">
         <div class="col-1-1 nano">
-            <div class="overthrow nano-content blur-black">株式会社エバディ（以下「当社」といいます）は、人材ビジネスを営む企業の責任として、みなさまの個人情報を保護するために細心の注意をはらっています。具体的には、以下の方針に基づき、個人情報の管理・運用を行っていますので、当社の提供する情報サービス（以下、「本サービス」といいます）をご利用いただく前に必ずお読みください。本サービスにおいて個人情報を登録された場合に、当社の個人情報の取扱いに関して同意をいただいたものといたします。
-                <br/><br/>
-                個人情報とは<br/><br/>
-                当社では、個人情報を以下のように定義しています。「個人に関する情報であって、当該情報に含まれる氏名、生年月日その他の記述、または個人別に付けられた番号、記号その他の符号、画像若しくは音声によっ
+            <div class="overthrow nano-content blur-black">
+                <?php get_template_part('part_rule_contact') ?>
             </div>
         </div>
     </div>
 
     <div class="grid grid-pad">
         <div class="col-1-1 text-center">
-            <a href="mailto:<?php echo $theme_options['ct_com_email'] ?>?subject=【求人のご依頼】&body=
+            <a href="mailto:<?php echo $theme_options['ct_com_email'] ?>?subject=【人材をお探しの企業様】&body=
 ■御社名:%0D%0A
 ■御社ホームページURL:%0D%0A
 ■部署名:%0D%0A
 ■お役職名:%0D%0A
 ■お名前:%0D%0A
 ■ご連絡先TEL、E-mail:%0D%0A
-■ご相談内容:%0D%0A
-■お問い合わせのきっかけ(当社をお知りになったきっかけ):%0D%0A" class="btn btn-warning btn-contact1">同意して送信</a>
+■ご相談内容:%0D%0A" class="btn btn-warning btn-contact1">同意して送信</a>
         </div>
         <div class="col-1-1">
             <p class="blur-black"><span class="green">※ </span>ウェブメーラー等を使用しており、デバイスにメーラー設定を行っていない方は、プライバシーポリシーに同意の上、<span class="black-text"><?php echo $theme_options['ct_com_email'] ?></span>宛に、ご連絡お願いいたします。 <br/>

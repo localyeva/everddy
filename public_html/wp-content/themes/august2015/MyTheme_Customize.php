@@ -189,6 +189,17 @@ function theme_customize_register($wp_customize) {
         'priority' => 1,
         'type' => 'textarea',
     ));
+    
+    $wp_customize->add_setting('contact_bottom_bg', array(
+        'default' => '#E6E6E6',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'contact_bottom_bg_c', array(
+        'label' => __('Contact Bottom BG'),
+        'section' => 'contact',
+        'settings' => 'contact_bottom_bg',
+        'priority' => 1,
+    )));
+    
 }
 
 add_action('customize_register', 'theme_customize_register');
@@ -202,6 +213,9 @@ function generate_css() {
         }
         .foot-img{
             background: url("<?php echo get_benefit_foreign_image_bg() ?>") no-repeat scroll 50% 50% / cover;
+        }
+        .foot-contact{
+            background: <?php echo get_contact_bottom_bg() ?> !important;
         }
     </style>
     <?php
@@ -280,4 +294,8 @@ function get_contact_descript() {
     $description = get_theme_mod('contact_descript');
     //
     return convert_newline($description, '<p class="blur-black">', '</p>');
+}
+
+function get_contact_bottom_bg(){
+    return get_theme_mod('contact_bottom_bg');
 }
