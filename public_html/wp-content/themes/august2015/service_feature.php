@@ -20,7 +20,7 @@ get_header();
             <div class="col-1-1 text-center btn-xs-headbox"><a href="#" class="btn btn-primary square-btn pad-btn">お問い合わせはこちら</a></div>
         </div><!-- grid -->  
     </div><!-- home-cta -->
-    
+
     <?php
     $args = array(
         'post_type' => 'service-feature',
@@ -34,7 +34,7 @@ get_header();
         $num_posts = count($loop->posts)
         ?>
         <?php while ($loop->have_posts()): $loop->the_post(); ?>
-            <div class="grid grid-pad <?php echo $xid == $num_posts?'last-part-pad' : 'part-pad' ?>" id='<?php echo $xid == 0 ? 'part0' : 'part' . $xid ?>'>
+            <div class="grid grid-pad <?php echo $xid == $num_posts ? 'last-part-pad' : 'part-pad' ?>" id='<?php echo $xid == 0 ? 'part0' : 'part' . $xid ?>'>
                 <div class="col-1-1">
                     <h1 class="number-title">
                         <?php if (get_field('image_number') != '') { ?>
@@ -44,7 +44,7 @@ get_header();
                     </h1>    
                     <?php echo get_field('content') ?>
                 </div>
-                
+
                 <?php if (have_rows('features')): ?>
                     <?php while (have_rows('features')) : the_row(); ?>
                         <div class="col-1-1">
@@ -62,6 +62,11 @@ get_header();
     <?php endif; ?>
     <?php wp_reset_postdata() ?>
 
+    <div class="grid grid-pad">
+        <div class="col-1-1 text-center">
+            <a href="<?php echo bloginfo('url') ?>/benefit" class="btn btn-success square-btn btn-detail-green pad-btn">外国人採用メリットはこちら</a>
+        </div>
+    </div>    
     <?php get_template_part('part_bottom_contact') ?>
 
 </section><!-- #content -->

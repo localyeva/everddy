@@ -46,7 +46,7 @@ get_header();
 
     <div class="grid grid-pad">
         <div class="col-1-1 text-center">
-            <a href="<?php echo bloginfo('url') ?>/service-feature" class="btn btn-success square-btn btn-detail-green pad-btn">弊社サービスの特徴はこちら</a>
+            <a href="<?php echo bloginfo('url') ?>/profile" class="btn btn-success square-btn btn-detail-green pad-btn">企業概要はこちら</a>
         </div>
     </div>
     <?php get_template_part('part_bottom_contact') ?>
