@@ -54,7 +54,7 @@ get_header();
                                 </header>
                             </article>
                             <h4>
-                                <a href="<?php echo bloginfo('url') ?>/<?php echo get_field('redirect_url') ?>"><?php the_title() ?></a>
+                                <a href="<?php echo bloginfo('url') ?>/<?php echo get_field('redirect_url') ?>" class="green-text"><?php the_title() ?></a>
                             </h4>
                             <p class="blur-black">
                                 <?php echo get_field('short_description') ?>
@@ -63,6 +63,7 @@ get_header();
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>
+            <?php wp_reset_postdata() ?>
 
         </div><!-- grid -->  
     </div><!-- home-cta -->
@@ -99,7 +100,7 @@ get_header();
                         <aside id = "text-3" class = "widget widget_text">
                             <div class = "textwidget">
                                 <?php echo get_field('content') ?>
-                                <div class = "home-point">
+                                <div class = "home-point button">
                                     <a href="<?php echo bloginfo('url') ?>/<?php echo get_field('redirect_url') ?>">
                                         <button class = "btn btn-warning btn-service">
                                             <span>詳細はこちら</span>
@@ -118,7 +119,8 @@ get_header();
             </div><!-- home-services -->
         <?php endwhile; ?>
     <?php endif; ?>
-
+    <?php wp_reset_postdata() ?>
+            
     <div class="bg foot-img">
         <div class="grid grid-pad bg-height">
             <div class="col-1-1 text-center text-pos">

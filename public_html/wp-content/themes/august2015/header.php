@@ -79,7 +79,7 @@
                         <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/benefit">外国人採用メリット</a></li>
                         <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/profile">企業概要</a></li>
 
-                        <li id="menu-item-6" class="btn-m-first-head menu-item menu-item-type-post_type menu-item-object-page menu-item-6 <?php echo $active_menu ?>"  style="margin-right:10px"><a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn">お問い合わせはこちら</a></li>
+                        <li id="menu-item-6" class="btn-m-first-head menu-item menu-item-type-post_type menu-item-object-page menu-item-6 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn">お問い合わせはこちら</a></li>
 
                         <li id="menu-item-7" class="btn-m-second-head menu-item menu-item-type-post_type menu-item-object-page menu-item-7 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/contact-job" class="btn btn-warning square-btn pad-btn">求職のご相談はこちら</a></li>
 

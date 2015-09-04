@@ -1,4 +1,7 @@
 @import 'back-to-top-style.css';
+.green-text {
+  color: #00a04c;
+}
 body {
   background-color: #f1f1f1;
 }
@@ -8,9 +11,6 @@ body {
 .cbp-spmenu h3 {
   color: #ffffff;
   background: #00a04c;
-}
-.cbp-spmenu .btn-m-first-head {
-  width: 225px;
 }
 .cbp-spmenu .btn-warning:hover {
   color: #ffffff;
@@ -574,6 +574,17 @@ ul {
   }
   .foot-contact .grid .text-left {
     text-align: center;
+  }
+  .home-point.button {
+    text-align: center;
+  }
+  .btn-service {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  #feature .btn-detail-green {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
 @media (max-width: 1080px) {
