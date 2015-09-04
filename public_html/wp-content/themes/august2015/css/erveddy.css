@@ -558,6 +558,8 @@ ul {
     display: block !important;
   }
   .text-left-head {
+    top: 20%;
+    transform: translate(0, 0);
     padding-right: 35px;
     width: 100%;
   }
