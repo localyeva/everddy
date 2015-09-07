@@ -28,6 +28,19 @@ body {
 .cbp-spmenu-vertical a {
   border-bottom: 1px solid #00a04c;
 }
+.btn {
+  font-family: Meiryo, mplus-1p-regular;
+}
+.main-title {
+  font-family: Meiryo, mplus-1p-regular;
+  font-size: 40px;
+  font-weight: bold;
+}
+.main-desc {
+  font-family: Meiryo, mplus-1p-regular;
+  font-size: 19px;
+  color: #737373;
+}
 a {
   color: #212737;
   outline: none !important;
@@ -112,16 +125,25 @@ a:active,
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  right: 20px;
-  padding-top: 15px;
+  right: 0px;
   padding-left: 40px;
-  padding-bottom: 5%;
+  width: 382px;
+  height: 418px;
   color: #fff;
   background: url('../img/bg1px.png');
   background-repeat: repeat;
 }
 .contact-box .pad {
   padding-bottom: 10px;
+}
+.contact-box .btn {
+  font-family: Meiryo, mplus-1p-regular;
+  font-size: 16px;
+  width: 184px;
+}
+.contact-box h3 {
+  font-family: Arial;
+  font-size: 30px;
 }
 .foot-img {
   -webkit-background-size: cover;
@@ -136,7 +158,8 @@ a:active,
   transform: translate(0, -50%);
 }
 .foot-img h1 {
-  font-size: 50px;
+  font-family: Meiryo, mplus-1p-regular;
+  font-size: 48px;
   margin-top: 0px;
 }
 .foot-img h3 {
@@ -155,7 +178,9 @@ a:active,
   /*padding-top: 10px;*/
   /*padding-bottom: 10px;*/
   /*background-repeat: repeat;*/
-  font-size: 20px;
+  font-family: Meiryo, mplus-1p-regular;
+  font-size: 26px;
+  font-weight: bold;
   padding-left: 10%;
   padding-right: 10%;
   color: #ffffff;
@@ -163,7 +188,7 @@ a:active,
 .foot-img .btn-foot span {
   display: inline-block;
   vertical-align: middle;
-  font-size: 28px;
+  padding-right: 20px;
 }
 .foot-img .btn-foot .eve-arrow {
   background: url('../img/arrow.png');
@@ -203,8 +228,12 @@ col-text-center {
   width: 186px;
 }
 .btn-primary {
-  background-color: #09afed;
-  border-color: #09afed;
+  background-color: #3498db;
+  border-color: #3498db;
+}
+.btn-warning {
+  background-color: #fda231;
+  border-color: #fda231;
 }
 .home-blog {
   border: none;
@@ -212,7 +241,8 @@ col-text-center {
 }
 .btn-service {
   border-radius: 0px;
-  font-size: 20px;
+  font-family: Meiryo, mplus-1p-regular;
+  font-size: 26px;
   font-weight: bold;
   padding-left: 100px;
   padding-right: 100px;
@@ -220,6 +250,7 @@ col-text-center {
 }
 .btn-service span {
   display: inline-block;
+  padding-right: 20px;
   vertical-align: middle;
 }
 .btn-service .eve-arrow {
@@ -232,7 +263,7 @@ col-text-center {
   -webkit-opacity: 0.45 !important;
 }
 .btn-large-text {
-  font-size: 20px;
+  font-size: 24px;
 }
 .site-footer {
   background: none repeat scroll 0 0 #0e2739;
@@ -243,7 +274,7 @@ col-text-center {
   padding-left: 60px;
 }
 .site-footer .title {
-  font-size: 20px;
+  font-size: 24px;
   color: #fff;
 }
 .site-footer .green-text {
@@ -252,6 +283,7 @@ col-text-center {
 }
 .site-footer .dif-text {
   color: #ddd2d2;
+  font-weight: bold;
 }
 .site-footer p {
   margin: 0px;
@@ -261,13 +293,10 @@ col-text-center {
   margin-top: 60px;
   padding-bottom: 80px;
 }
-.foot-contact .btn-foot-contact1 {
-  width: 230px;
-  font-size: 20px;
-}
+.foot-contact .btn-foot-contact1,
 .foot-contact .btn-foot-contact2 {
-  width: 230px;
-  font-size: 20px;
+  width: 280px;
+  font-size: 24px;
 }
 .white-text {
   color: #ffffff;
@@ -447,7 +476,7 @@ ul {
   font-size: 20px;
 }
 .btn-detail-green {
-  font-size: 20px;
+  font-size: 24px;
   background-color: #00a04c;
   padding-left: 26px;
   padding-right: 26px;
@@ -506,7 +535,7 @@ ul {
   height: 400px;
 }
 #profile .btn-strange {
-  font-size: 20px;
+  font-size: 24px;
   border: 2px solid #737373;
   padding: 6px 12px;
   color: #737373;
@@ -537,7 +566,7 @@ ul {
 }
 .btn-contact1 {
   width: 300px;
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 60px;
 }
 /*--------------------------------------------------------------------- import*/
@@ -556,20 +585,25 @@ ul {
   }
   .btn-xs-headbox {
     display: block !important;
+    left: 32%;
+    transform: translate(0, 0);
   }
   .text-left-head {
-    top: 20%;
+    top: 15%;
     transform: translate(0, 0);
     padding-right: 35px;
     width: 100%;
   }
   .text-left-head h1 {
     font-size: 40px !important;
-    line-height: 35px;
   }
   .text-left-head h3 {
     font-size: 20px;
     line-height: 25px;
+  }
+  .foot-img .text-pos {
+    top: 15%;
+    transform: translate(0, 0);
   }
   .foot-contact .grid .text-right {
     text-align: center;
@@ -587,6 +621,12 @@ ul {
   #feature .btn-detail-green {
     padding-left: 12px;
     padding-right: 12px;
+  }
+  #profile table th {
+    padding-left: 10px;
+  }
+  #profile table td {
+    padding: 20px 0 20px 20px;
   }
 }
 @media (max-width: 1080px) {

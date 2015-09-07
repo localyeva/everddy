@@ -25,7 +25,7 @@ get_header();
     <div class="home-cta service-padding">
         <div class="grid grid-pad">
             <div class="col-1-1 text-center">
-                <h2><?php echo get_service_text() ?></h2>
+                <h2 class="main-title"><?php echo get_service_text() ?></h2>
                 <?php echo get_service_descript() ?>
             </div><!-- col-10-12 -->
         </div><!-- grid -->  
@@ -71,7 +71,7 @@ get_header();
     <div class="home-cta service-padding">
         <div class="grid grid-pad">
             <div class="col-1-1 text-center">
-                <h2><?php echo get_benefit_service_text() ?></h2>
+                <h2 class="main-title"><?php echo get_benefit_service_text() ?></h2>
             </div><!-- col-10-12 -->
         </div><!-- grid -->  
     </div><!-- home-cta -->

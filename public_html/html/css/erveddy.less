@@ -3,7 +3,8 @@
 @green: #62B446;
 @boldgreen: #00A04C;
 @blur-black: #737373;
-@larg-button-text-size: 20px;
+@larg-button-text-size: 24px;
+@special-font: Meiryo, mplus-1p-regular;
 
 @bg-color: #f1f1f1;
 .green-text{
@@ -38,6 +39,21 @@ body{
 
 .cbp-spmenu-vertical a {
     border-bottom: 1px solid @boldgreen;
+}
+
+.btn{
+    font-family: @special-font;
+}
+
+.main-title{
+    font-family: @special-font;
+    font-size: 40px;
+    font-weight: bold;
+}
+.main-desc{
+    font-family: @special-font;
+    font-size: 19px;
+    color: @blur-black;
 }
 
 a {
@@ -123,16 +139,24 @@ a:hover, a:active, .main-navigation li:hover > a, .main-navigation li:active > a
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    right: 20px;
-    padding-top: 15px;
+    right: 0px;
     padding-left: 40px;
-    //padding-right: 0px;
-    padding-bottom: 5%;
+    width: 382px;
+    height: 418px;
     color:#fff; 
     background: url('../img/bg1px.png'); 
     background-repeat: repeat;
     .pad{
         padding-bottom: 10px;        
+    }
+    .btn{
+        font-family: @special-font;
+        font-size: 16px;
+        width: 184px;
+    }
+    h3{
+        font-family: Arial;
+        font-size: 30px;
     }
 }
 .foot-img {
@@ -145,7 +169,8 @@ a:hover, a:active, .main-navigation li:hover > a, .main-navigation li:active > a
         transform: translate(0, -50%);
     }
     h1{
-        font-size: 50px;
+        font-family: @special-font;
+        font-size: 48px;
         margin-top: 0px;
     }
     h3{
@@ -164,14 +189,16 @@ a:hover, a:active, .main-navigation li:hover > a, .main-navigation li:active > a
         /*padding-top: 10px;*/
         /*padding-bottom: 10px;*/
         /*background-repeat: repeat;*/
-        font-size: @larg-button-text-size;
+        font-family: @special-font;
+        font-size: 26px;
+        font-weight: bold;
         padding-left: 10%; 
         padding-right: 10%;
         color: @white;        
         span{
             display: inline-block;
             vertical-align: middle;
-            font-size: 28px;
+            padding-right: 20px;
         }
         .eve-arrow{
             background: url('../img/arrow.png');
@@ -223,8 +250,13 @@ col-text-center {
 }
 
 .btn-primary {
-    background-color: #09afed;
-    border-color: #09afed;
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.btn-warning {
+    background-color: #fda231;
+    border-color: #fda231;
 }
 
 .home-blog {
@@ -238,12 +270,16 @@ col-text-center {
 
 .btn-service{    
     border-radius: 0px;
-    font-size: @larg-button-text-size;
+    font-family: @special-font;
+    font-size: 26px;
     font-weight: bold;
+    //width: 480px;
+    //height: 62px;
     padding-left: 100px; padding-right: 100px;
     color: @white;
     span{
         display: inline-block;
+        padding-right: 20px;
         vertical-align: middle;
     }
     .eve-arrow{
@@ -280,6 +316,7 @@ col-text-center {
 
     .dif-text{
         color: #ddd2d2;
+        font-weight: bold;
     }
 
     p{
@@ -291,12 +328,8 @@ col-text-center {
 .foot-contact{
     margin-top: 60px;
     padding-bottom: 80px;
-    .btn-foot-contact1{
-        width: 230px;
-        font-size: @larg-button-text-size;
-    }
-    .btn-foot-contact2{
-        width: 230px;
+    .btn-foot-contact1, .btn-foot-contact2{
+        width: 280px;
         font-size: @larg-button-text-size;
     }
 }

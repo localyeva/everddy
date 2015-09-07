@@ -1,7 +1,7 @@
 <div class="home-cta foot-contact"> 
     <div class="grid grid-pad">
         <div class="col-1-1 text-center">
-            <h2><?php echo get_contact_text() ?></h2>
+            <h2 class="main-title"><?php echo get_contact_text() ?></h2>
         </div><!-- col-10-12 -->                        
     </div><!-- grid -->
     <div class="grid grid-pad">

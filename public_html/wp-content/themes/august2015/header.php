@@ -26,7 +26,15 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <style type="text/css">
+            @font-face
+            {
+                font-family: 'mplus-1p-regular';
+                src: url("http://mplus-fonts.sourceforge.jp/webfonts/mplus-1p-regular.ttf")
+                    format("truetype");
+            }
 
+        </style>
         <?php        
         global $active_menus;
         wp_head(); 
@@ -53,9 +61,9 @@
                                     <ul id="menu-menu-1" class="menu">
                                         <li id="menu-item-1" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1 <?php echo $active_menus['home'] ?>"><a href="<?php echo bloginfo('url') ?>">ホーム</a></li>
                                         <li id="menu-item-2" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2 <?php echo $active_menus['service-detail'] ?>"><a href="<?php echo bloginfo('url') ?>/service-detail">サービス</a></li>
-                                        <li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3 <?php echo $active_menus['service-feature'] ?>"><a href="<?php echo bloginfo('url') ?>/service-feature">ご利用メリット</a></li>
+                                        <!--li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3 <?php echo $active_menus['service-feature'] ?>"><a href="<?php echo bloginfo('url') ?>/service-feature">ご利用メリット</a></li-->
                                         <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4 <?php echo $active_menus['benefit'] ?>"><a href="<?php echo bloginfo('url') ?>/benefit">外国人採用メリット</a></li>
-                                        <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5 <?php echo $active_menus['profile'] ?>"><a href="<?php echo bloginfo('url') ?>/profile">企業概要</a></li>
+                                        <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5 <?php echo $active_menus['profile'] ?>"><a href="<?php echo bloginfo('url') ?>/profile"><?php echo get_profile_top_text() ?></a></li>
 
                                         <li id="menu-item-6" class="btn-first-head menu-item menu-item-type-post_type menu-item-object-page menu-item-6 btn-head-pad"><a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn">お問い合わせはこちら</a></li>
 
@@ -75,7 +83,7 @@
                     <ul id="menu-menu-2" class="menu">
                         <li id="menu-item-1" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>">ホーム</a></li>
                         <li id="menu-item-2" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/service-detail">サービス</a></li>
-                        <li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/service-feature">ご利用メリット</a></li>
+                        <!--li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/service-feature">ご利用メリット</a></li-->
                         <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/benefit">外国人採用メリット</a></li>
                         <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/profile">企業概要</a></li>
 

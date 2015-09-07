@@ -38,10 +38,10 @@ get_header();
 
     <div class="grid grid-pad">
         <div class="col-1-1">
-            <h1 class="number-title">会社概要</h1><br/>                        
+            <h1 class="number-title"><?php echo get_profile_top_text() ?></h1><br/>                        
         </div>
-        <div class="col-1-1 table-responsive">
-            <table class="table blur-black">
+        <div class="col-1-1">
+            <table class="table table-responsive blur-black">
                 <tr>
                     <th>会社名</th>
                     <td><?php echo $theme_options['ct_com_name_jp'] ?><br/><span class="black-text"><?php echo $theme_options['ct_com_name_en'] ?></span></td>
@@ -77,7 +77,7 @@ get_header();
                     <td>
                         <?php echo $theme_options['ct_com_content'] ?>
                     </td>
-                </tr>
+                </tr>table-responsive
                 <tr>
                     <th>アクセス</th>
                     <td id='map'>
