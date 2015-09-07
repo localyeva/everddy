@@ -25,6 +25,7 @@
     </div><!-- grid -->
 
 </footer><!-- #colophon -->
+<p><span class="dif-text">Tel: </span><span><?php echo "".$theme_options['ct_com_telephone'] ?> - </span><span class="dif-text">Fax: </span><span><?php echo "".$theme_options['ct_com_fax'] ?></span></p>
 </div><!-- #page -->        
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
