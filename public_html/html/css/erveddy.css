@@ -1,4 +1,8 @@
 @import 'back-to-top-style.css';
+@font-face {
+  font-family: 'mplus-1p-regular';
+  src: url("//mplus-fonts.sourceforge.jp/webfonts/mplus-1p-regular.ttf") format("truetype");
+}
 .green-text {
   color: #00a04c;
 }
