@@ -310,7 +310,7 @@ col-text-center {
     color: #b3b3b3;
     padding: 10px 0 10px;
     .footer-pad{
-        padding-left: 60px
+        padding-left: 60px;
     }
     .title{
         font-size: @larg-button-text-size;
@@ -330,6 +330,19 @@ col-text-center {
         margin: 0px;
         padding: 0px;
     }
+    aside{
+        dl{
+            &.foot-info{
+                dt, dd{
+                    display: inline-block !important;
+                }
+                .dif2-text{
+                    color: #b3b3b3;
+                }
+            }
+        }
+    }
+
 }
 
 .foot-contact{

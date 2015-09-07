@@ -296,6 +296,13 @@ col-text-center {
   margin: 0px;
   padding: 0px;
 }
+.site-footer aside dl.foot-info dt,
+.site-footer aside dl.foot-info dd {
+  display: inline-block !important;
+}
+.site-footer aside dl.foot-info .dif2-text {
+  color: #b3b3b3;
+}
 .foot-contact {
   margin-top: 60px;
   padding-bottom: 80px;
