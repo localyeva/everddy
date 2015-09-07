@@ -15,8 +15,6 @@ get_header();
             </div>
 
             <?php get_template_part('part_top_contact') ?>
-
-            <div class="col-1-1 text-center btn-xs-headbox"><a href="#" class="btn btn-primary square-btn pad-btn">お問い合わせはこちら</a></div>
         </div><!-- grid -->  
     </div><!-- home-cta -->
     <?php

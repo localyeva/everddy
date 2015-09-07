@@ -11,3 +11,4 @@
         <h3>Tel: <?php echo $theme_options['ct_com_telephone'] ?></h3>
     </div>
 </div>
+<div class="col-1-1 text-center btn-xs-headbox"><a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn pad-btn">お問い合わせはこちら</a></div>
