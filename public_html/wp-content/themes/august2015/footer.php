@@ -17,7 +17,8 @@
                     <p><?php echo $theme_options['ct_com_address_en'] ?></p>
                 <?php endif; ?>
                 <?php if (isset($theme_options['ct_com_zip_code'])): ?>
-                    <p>zip1<?php echo $theme_options['ct_com_zip_code'] ?></p>
+                    <?php var_dump($theme_options['ct_com_zip_code']) ?>
+                    <p>zip<?php echo ":".$theme_options['ct_com_zip_code'] ?></p>
                     <p>zip2&nbsp;<?php echo $theme_options['ct_com_zip_code'] ?></p>
                     <p>zip3: <?php echo esc_html($theme_options['ct_com_zip_code']) ?></p>
                 <?php endif; ?>
