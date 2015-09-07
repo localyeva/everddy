@@ -123,6 +123,17 @@ function theme_customize_register($wp_customize) {
         'priority' => 1,
         'type' => 'text',
     ));
+    
+    $wp_customize->add_setting('service_button_status', array(
+        'default' => '',
+    ));
+    $wp_customize->add_control('service_button_status_c', array(
+        'label' => __('Show / Hide Service button'),
+        'section' => 'benefit_service',
+        'settings' => 'service_button_status',
+        'priority' => 1,
+        'type' => 'checkbox',
+    ));
 
 //    $wp_customize->add_setting('benefit_service_image', array(
 //        'default' => ''
@@ -262,7 +273,9 @@ function get_service_descript() {
 function get_benefit_service_text() {
     return get_theme_mod('benefit_service_text');
 }
-
+function get_service_button_status() {
+    return get_theme_mod('service_button_status');
+}
 //function get_benefit_service_image() {
 //    return esc_url(get_theme_mod('benefit_service_image'));
 //}

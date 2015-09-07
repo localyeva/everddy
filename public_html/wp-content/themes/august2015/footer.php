@@ -19,7 +19,7 @@
                 <?php if (isset($theme_options['ct_com_zip_code'])): ?>
                     <p>Zip<?php echo $theme_options['ct_com_zip_code'] ?></p>
                 <?php endif; ?>                    
-                <p><span class="dif-text">Tel</span><span>: <?php echo $theme_options['ct_com_telephone'] ?> - </span><span class="dif-text">Fax</span><span>: <?php echo $theme_options['ct_com_fax'] ?></span></p>
+                    <p><span class="dif-text">Tel:</span><span style="color: #ADAEB3"> <?php echo $theme_options['ct_com_telephone'] ?> - </span><span class="dif-text">Fax:</span><span style="color: #ADAEB3"> <?php echo $theme_options['ct_com_fax'] ?></span></p>
             </aside>
         </div>
     </div><!-- grid -->

@@ -222,6 +222,9 @@ a:active,
   color: #000;
   padding-top: 0px;
 }
+.home-blog > p {
+  line-height: 25px;
+}
 col-text-center {
   float: center;
 }
@@ -557,7 +560,8 @@ ul {
 .nano {
   border: 1px solid #D3D3D3;
   background: #fff;
-  height: 250px;
+  line-height: 30px;
+  height: 600px;
 }
 .nano .nano-content {
   padding: 20px;

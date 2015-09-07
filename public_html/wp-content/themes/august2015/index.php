@@ -100,6 +100,8 @@ get_header();
                         <aside id = "text-3" class = "widget widget_text">
                             <div class = "textwidget">
                                 <?php echo get_field('content') ?>
+                                
+                                <?php if(get_service_button_status()): ?>
                                 <div class = "home-point button">
                                     <a href="<?php echo bloginfo('url') ?>/<?php echo get_field('redirect_url') ?>">
                                         <button class = "btn btn-warning btn-service">
@@ -108,6 +110,7 @@ get_header();
                                         </button>
                                     </a>
                                 </div>
+                                <?php endif; ?>
                             </div>
                         </aside>
                     </div><!--col-1-2 -->  
