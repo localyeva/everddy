@@ -17,15 +17,17 @@
                     <p><?php echo $theme_options['ct_com_address_en'] ?></p>
                 <?php endif; ?>
                 <?php if (isset($theme_options['ct_com_zip_code'])): ?>
-                    <p>zip: <?php echo "".$theme_options['ct_com_zip_code'] ?></p>
-                <?php endif; ?>                    
-                    <p><span class="dif-text">Tel: </span><span><?php echo "".$theme_options['ct_com_telephone'] ?> - </span><span class="dif-text">Fax: </span><span><?php echo "".$theme_options['ct_com_fax'] ?></span></p>
+                    <p>zip1<?php echo $theme_options['ct_com_zip_code'] ?></p>
+                    <p>zip2&nbsp;<?php echo $theme_options['ct_com_zip_code'] ?></p>
+                    <p>zip3: <?php echo esc_html($theme_options['ct_com_zip_code']) ?></p>
+                <?php endif; ?>
+
+                <p><span class="dif-text">Tel: </span><span><?php echo esc_html($theme_options['ct_com_telephone']) ?> - </span><span class="dif-text">Fax: </span><span><?php echo esc_html($theme_options['ct_com_fax']) ?></span></p>
             </aside>
         </div>
     </div><!-- grid -->
 
 </footer><!-- #colophon -->
-<p><span class="dif-text">Tel: </span><span><?php echo "".$theme_options['ct_com_telephone'] ?> - </span><span class="dif-text">Fax: </span><span><?php echo "".$theme_options['ct_com_fax'] ?></span></p>
 </div><!-- #page -->        
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
