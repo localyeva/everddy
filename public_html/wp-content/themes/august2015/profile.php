@@ -77,7 +77,7 @@ get_header();
                     <td>
                         <?php echo $theme_options['ct_com_content'] ?>
                     </td>
-                </tr>table-responsive
+                </tr>
                 <tr>
                     <th>アクセス</th>
                     <td id='map'>
