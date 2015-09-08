@@ -105,39 +105,39 @@ function set_wp_title($title, $sep) {
     if (is_feed()) {
         return $title;
     }
-
+    
     // Add the site name.
     $title .= get_bloginfo('name');
 
     if (is_front_page() || is_home()) {
-        $title = "TOP $sep $title";
+        $title = "$title";
     } else {
 
         if (is_page()) {
             if (is_page('service-detail')) {
-                $title = "service-detail $sep $title";
+                $title = "サービス $title";
             }
 
             if (is_page('service-feature')) {
-                $title = "service-feature $sep $title";
+                $title = "ご利用メリット $title";
             }
 
 
             if (is_page('benefit')) {
-                $title = "benefit $sep $title";
+                $title = "外国人採用メリット $title";
             }
 
 
             if (is_page('profile')) {
-                $title = "profile $sep $title";
+                $title = "会社概要 $title";
             }
 
             if (is_page('contact')) {
-                $title = "contact $sep $title";
+                $title = "お問い合わせはこちら $title";
             }
 
             if (is_page('contact-job')) {
-                $title = "contact-job $sep $title";
+                $title = "求職のご相談はこちら $title";
             }
         }
     }

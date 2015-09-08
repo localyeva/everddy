@@ -13,7 +13,7 @@
         <meta content="国内外の優秀な人材をご紹介いたします。御社の成長戦略実現をサポートさせていただくパートナーとして、単なる人材の紹介に留まらず、採用計画・人材配置・外国人採用定着のノウハウなど、人事戦略全般についてご相談を承ります。" itemprop="description" name="description">
         <meta content="転職、求人、中途採用、ITエンジニア、Webエンジニア、グローバル人材、外国人採用、java、php、エバディ、everddy" itemprop="keywords" name="keywords">
 
-        <title><?php echo wp_title() ?></title>
+        <title><?php echo wp_title('｜') ?></title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" id="prefix-font-awesome-css" href="<?php echo get_template_directory_uri() ?>/css/font-awesome.min.css" media="all">
