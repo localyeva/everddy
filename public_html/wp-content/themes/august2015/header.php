@@ -4,6 +4,7 @@
         <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no">
 
         <link type="image/x-icon" href="<?php echo get_template_directory_uri() ?>/images/evaicon.png" rel="shortcut icon">
 
@@ -26,9 +27,9 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-        <?php        
+        <?php
         global $active_menus;
-        wp_head(); 
+        wp_head();
         ?>
     </head>
     <body>
