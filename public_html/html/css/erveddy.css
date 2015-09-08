@@ -640,12 +640,6 @@ ul {
   #profile table td {
     padding: 20px 0 20px 20px;
   }
-  .site-footer .footer-pad {
-    padding-left: 20px;
-  }
-  .site-footer .pull-right {
-    float: none !important;
-  }
 }
 @media (max-width: 1080px) {
   .number-title {
@@ -654,5 +648,11 @@ ul {
   .number-title img {
     width: 40px;
     height: 40px;
+  }
+  .site-footer .footer-pad {
+    padding-left: 20px;
+  }
+  .site-footer .pull-right {
+    float: none !important;
   }
 }
