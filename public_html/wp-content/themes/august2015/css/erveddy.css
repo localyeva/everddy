@@ -651,6 +651,7 @@ ul {
   }
   .site-footer .footer-pad {
     padding-left: 20px;
+    float: none !important;
   }
   .site-footer .pull-right {
     float: none !important;

@@ -17,7 +17,7 @@
                     <p><?php echo $theme_options['ct_com_address_en'] ?></p>
                 <?php endif; ?>
                 <?php if (isset($theme_options['ct_com_zip_code'])): ?>
-                    <p>Zip： <?php echo $theme_options['ct_com_zip_code'] ?></p>
+                    <p>Zip: <?php echo $theme_options['ct_com_zip_code'] ?></p>
                 <?php endif; ?>
                 <p><span class="dif-text">Tel: </span><span><?php echo esc_html($theme_options['ct_com_telephone']) ?> - </span><span class="dif-text">Fax: </span><span><?php echo esc_html($theme_options['ct_com_fax']) ?></span></p>
             </aside>
