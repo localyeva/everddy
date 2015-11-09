@@ -7,7 +7,8 @@
   color: #00a04c;
 }
 body {
-  background-color: #f1f1f1;
+  background-color: #ffffff;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "メイリオ, Meiryo", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "sans-serif";
 }
 .cbp-spmenu {
   background: #62b446;
@@ -43,7 +44,7 @@ body {
 .main-desc {
   font-family: Meiryo, mplus-1p-regular;
   font-size: 19px;
-  color: #737373;
+  color: #000000;
 }
 a {
   color: #212737;
@@ -215,7 +216,7 @@ a:active,
   position: relative;
 }
 .home-cta {
-  background: none repeat scroll 0 0 #f1f1f1;
+  background: none repeat scroll 0 0 #ffffff;
   color: #000;
 }
 .home-cta h4 {
@@ -244,7 +245,7 @@ col-text-center {
 }
 .home-blog {
   border: none;
-  background: #f1f1f1;
+  background: #ffffff;
 }
 .btn-service {
   border-radius: 0px;
@@ -319,7 +320,7 @@ col-text-center {
   color: #000000;
 }
 .blur-black {
-  color: #737373;
+  color: #000000;
 }
 .service-padding {
   padding-bottom: 10px;
@@ -550,13 +551,13 @@ ul {
 }
 #profile .btn-strange {
   font-size: 24px;
-  border: 2px solid #737373;
+  border: 2px solid #000000;
   padding: 6px 12px;
-  color: #737373;
+  color: #000000;
   width: 250px;
 }
 #profile .btn-strange:hover {
-  background: #e6e6e6;
+  background: #737373;
 }
 #profile .top-pad {
   padding-top: 60px;
