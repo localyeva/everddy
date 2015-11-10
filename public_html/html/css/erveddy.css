@@ -533,6 +533,9 @@ ul {
 #contact2 .text-left-head {
   top: 37%;
 }
+#profile table {
+  margin-left: 10px;
+}
 #profile table th {
   width: 25%;
   text-align: center;
@@ -561,6 +564,13 @@ ul {
 }
 #profile .top-pad {
   padding-top: 60px;
+}
+#profile .tb-bg {
+  background-color: #f1f1f1;
+}
+#profile .tb-title {
+  padding-left: 80px;
+  padding-top: 10px;
 }
 .grid-pad-nano {
   padding: 20px;

@@ -33,12 +33,33 @@ get_header();
         </div>
     </div><!-- grid -->
     <?php endif; ?>
-
-    <div class="grid grid-pad">
-        <div class="col-1-1">
-            <h1 class="number-title"><?php echo get_profile_top_text() ?></h1><br/>                        
+    <?php
+    $args = array(
+        'post_type' => 'ceo-message',
+        'posts_per_page' => 1,
+        'orderby' => array('date' => 'DESC'),
+    );
+    $loop = new WP_Query($args);
+    if ($loop->have_posts()){
+        while ($loop->have_posts()){
+            $loop->the_post();
+        
+    ?>
+    <div class="grid grid-pad top-pad">
+        <div class="col-3-12">
+            <img src='<?php echo get_field('image') ?>' class="img-responsive"/>
         </div>
-        <div class="col-1-1">
+        <div class="col-9-12">                                      
+            <?php echo $post->post_content ?>
+        </div>
+    </div>
+    <?php }
+    }
+    wp_reset_postdata();
+    ?>
+    <div class="grid grid-pad">
+        <div class="col-1-1 tb-bg">
+            <h1 class="number-title tb-title" ><?php echo get_profile_top_text() ?></h1>
             <table class="table table-responsive blur-black">
                 <tr>
                     <th>会社名</th>

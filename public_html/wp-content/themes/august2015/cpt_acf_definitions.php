@@ -136,6 +136,30 @@ function cptui_register_my_cpts() {
     );
     register_post_type("benefit", $args);
 
+    $labels = array(
+        "name" => "CEO Message",
+        "singular_name" => "CEO Message",
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "show_ui" => true,
+        "has_archive" => false,
+        "show_in_menu" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array("slug" => "ceo-message", "with_front" => true),
+        "query_var" => true,
+        "menu_position" => 31,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h6.png',
+        "supports" => array("title", "editor"),
+    );
+    register_post_type("ceo-message", $args);
+
 // End of cptui_register_my_cpts()
 }
 
@@ -419,4 +443,39 @@ if (function_exists("register_field_group")) {
         ),
         'menu_order' => 0,
     ));
+
+    register_field_group(array(
+        'id' => 'acf_ceo-message',
+        'title' => 'CEO Message',
+        'fields' => array(
+            array(
+                'key' => 'field_5640664ea9c12',
+                'label' => 'Image',
+                'name' => 'image',
+                'type' => 'image',
+                'save_format' => 'url',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'ceo-message',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array(
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array(
+            ),
+        ),
+        'menu_order' => 0,
+    ));
 }
+    
