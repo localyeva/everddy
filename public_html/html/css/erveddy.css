@@ -35,15 +35,15 @@ body {
   border-bottom: 1px solid #00a04c;
 }
 .btn {
-  font-family: Meiryo, mplus-1p-regular;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
 }
 .main-title {
-  font-family: Meiryo, mplus-1p-regular;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
   font-size: 30px;
   font-weight: bold;
 }
 .main-desc {
-  font-family: Meiryo, mplus-1p-regular;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
   font-size: 19px;
   color: #000000;
 }
@@ -143,7 +143,7 @@ a:active,
   padding-bottom: 10px;
 }
 .contact-box .btn {
-  font-family: Meiryo, mplus-1p-regular;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
   font-size: 16px;
   width: 184px;
 }
@@ -164,7 +164,7 @@ a:active,
   transform: translate(0, -50%);
 }
 .foot-img h1 {
-  font-family: Meiryo, mplus-1p-regular;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
   font-size: 48px;
   margin-top: 0px;
 }
@@ -184,7 +184,7 @@ a:active,
   /*padding-top: 10px;*/
   /*padding-bottom: 10px;*/
   /*background-repeat: repeat;*/
-  font-family: Meiryo, mplus-1p-regular;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
   font-size: 26px;
   font-weight: bold;
   padding-left: 10%;
@@ -250,7 +250,7 @@ col-text-center {
 }
 .btn-service {
   border-radius: 0px;
-  font-family: Meiryo, mplus-1p-regular;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
   font-size: 26px;
   font-weight: bold;
   padding-left: 100px;

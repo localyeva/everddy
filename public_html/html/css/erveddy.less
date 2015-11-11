@@ -9,7 +9,8 @@
     font-family: 'mplus-1p-regular';
     src: url("//mplus-fonts.sourceforge.jp/webfonts/mplus-1p-regular.ttf") format("truetype");
 }
-@special-font: Meiryo, mplus-1p-regular;
+@special-font: "Open Sans", "Helvetica Neue", "Helvetica", Arial, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
+//Meiryo, mplus-1p-regular;
 
 @bg-color: #fff;
 .green-text{
@@ -17,7 +18,7 @@
 }
 body{
     background-color: @bg-color;
-    font-family:  "Open Sans", "Helvetica Neue", "Helvetica", Arial, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-family: @special-font;
 }
 .cbp-spmenu {
     background: @green;
