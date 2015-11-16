@@ -285,12 +285,21 @@ col-text-center {
     font-weight: bold;
     //width: 480px;
     //height: 62px;
-    padding-left: 100px; padding-right: 100px;
+    padding-left: 20px; padding-right: 20px;        
+    max-width:500px;
+    //max-height: 71px;
+    background: lighten(@color-bg-btn-1, 45%); 
+    border: solid 5px fade(#FFF, 45%);
     color: @white;
     span{
         display: inline-block;
-        padding-right: 20px;
+        //padding-right: 20px;
         vertical-align: middle;
+    }
+    &:hover{
+        background: fade(@color-bg-btn-1, @opacity-btn-1); 
+        border-color: fade(@white, @opacity-btn-1);
+        color: @white;
     }
     .eve-arrow{
         background: url('../img/arrow.png');
@@ -298,8 +307,8 @@ col-text-center {
         vertical-align: middle;
         width: 38px;
         height: 38px;
-        opacity: 45% !important;
-        -webkit-opacity: 0.45 !important;
+        opacity: 0.45 !important;
+        background-repeat: no-repeat;
     }
 }
 

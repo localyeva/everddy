@@ -99,16 +99,16 @@ get_header();
                             <div class = "textwidget">
                                 <?php echo get_field('content') ?>
                                 
-                                <?php if(get_service_button_status()): ?>
+                                <?php //if(get_service_button_status()): ?>
                                 <div class = "home-point button">
-                                    <a href="<?php echo bloginfo('url') ?>/<?php echo get_field('redirect_url') ?>">
-                                        <button class = "btn btn-warning btn-service">
-                                            <span>詳細はこちら</span>
-                                            <img src = "<?php echo get_template_directory_uri() ?>/img/arrow.png"/>
+                                    <a href="<?php echo bloginfo('url') ?>/service-feature<?php //echo get_field('redirect_url') ?>">
+                                        <button class = "btn btn-service">
+                                            <span>２０３０年の「働く」を考える</span>
+                                            <i class="eve-arrow"></i>
                                         </button>
                                     </a>
                                 </div>
-                                <?php endif; ?>
+                                <?php //endif; ?>
                             </div>
                         </aside>
                     </div><!--col-1-2 -->  
