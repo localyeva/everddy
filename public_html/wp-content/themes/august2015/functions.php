@@ -5,16 +5,16 @@
  * 
  */
 
-include_once (dirname(__FILE__) . '/MyFunctions.php');
-include_once (dirname(__FILE__) . '/MySettings.php');
-include_once (dirname(__FILE__) . '/MyTheme_Customize.php');
-include_once (dirname(__FILE__) . '/MyTheme_Customize_Profile.php');
-include_once (dirname(__FILE__) . '/MyTheme_Customize_Contact.php');
-include_once (dirname(__FILE__) . '/MyTheme_Customize_Contact_Job.php');
-include_once (dirname(__FILE__) . '/MyTheme_Customize_Service_Detail.php');
-include_once (dirname(__FILE__) . '/MyTheme_Customize_Service_Feature.php');
-include_once (dirname(__FILE__) . '/MyTheme_Customize_Benefit.php');
-include_once(dirname(__FILE__) . '/cpt_acf_definitions.php');
+include_once (dirname(__FILE__) . '/lib/includes/MyFunctions.php');
+include_once (dirname(__FILE__) . '/lib/includes/MySettings.php');
+include_once (dirname(__FILE__) . '/lib/includes/MyTheme_Customize.php');
+include_once (dirname(__FILE__) . '/lib/includes/MyTheme_Customize_Profile.php');
+include_once (dirname(__FILE__) . '/lib/includes/MyTheme_Customize_Contact.php');
+include_once (dirname(__FILE__) . '/lib/includes/MyTheme_Customize_Contact_Job.php');
+include_once (dirname(__FILE__) . '/lib/includes/MyTheme_Customize_Service_Detail.php');
+include_once (dirname(__FILE__) . '/lib/includes/MyTheme_Customize_Service_Feature.php');
+include_once (dirname(__FILE__) . '/lib/includes/MyTheme_Customize_Benefit.php');
+include_once (dirname(__FILE__) . '/lib/includes/cpt_acf_definitions.php');
 
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */

@@ -160,6 +160,28 @@ function cptui_register_my_cpts() {
     );
     register_post_type("ceo-message", $args);
 
+    $labels = array(
+        "name" => "Recruit",
+        "singular_name" => "Recruit",
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "show_ui" => true,
+        "has_archive" => false,
+        "show_in_menu" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array("slug" => "recruit", "with_front" => true),
+        "query_var" => true,
+        "supports" => array("title", "editor"),
+    );
+    register_post_type("recruit", $args);
+
 // End of cptui_register_my_cpts()
 }
 
@@ -464,6 +486,213 @@ if (function_exists("register_field_group")) {
                     'param' => 'post_type',
                     'operator' => '==',
                     'value' => 'ceo-message',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array(
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array(
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+
+    register_field_group(array(
+        'id' => 'acf_recruit',
+        'title' => 'Recruit',
+        'fields' => array(
+            array(
+                'key' => 'field_568c90bdd320c',
+                'label' => 'Block Info',
+                'name' => 'block_info',
+                'type' => 'repeater',
+                'sub_fields' => array(
+                    array(
+                        'key' => 'field_568c98d5d320d',
+                        'label' => 'TItle',
+                        'name' => 'title',
+                        'type' => 'select',
+                        'column_width' => '',
+                        'choices' => array(
+                            '企業・求人概要' => '企業・求人概要',
+                            '応募条件' => '応募条件',
+                            '動務・就業規定・その他情報' => '動務・就業規定・その他情報',
+                        ),
+                        'default_value' => '',
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                    ),
+                    array(
+                        'key' => 'field_568c9c44d320e',
+                        'label' => 'Description 1',
+                        'name' => 'description_1',
+                        'type' => 'repeater',
+                        'conditional_logic' => array(
+                            'status' => 1,
+                            'rules' => array(
+                                array(
+                                    'field' => 'field_568c98d5d320d',
+                                    'operator' => '==',
+                                    'value' => '企業・求人概要',
+                                ),
+                            ),
+                            'allorany' => 'all',
+                        ),
+                        'column_width' => '',
+                        'sub_fields' => array(
+                            array(
+                                'key' => 'field_568c9d72d320f',
+                                'label' => 'Sub Title',
+                                'name' => 'sub_title',
+                                'type' => 'select',
+                                'column_width' => '',
+                                'choices' => array(
+                                    '募集背景' => '募集背景',
+                                    '概要' => '概要',
+                                ),
+                                'default_value' => '',
+                                'allow_null' => 0,
+                                'multiple' => 0,
+                            ),
+                            array(
+                                'key' => 'field_568cabe0d3210',
+                                'label' => 'Content',
+                                'name' => 'content',
+                                'type' => 'textarea',
+                                'column_width' => '',
+                                'default_value' => '',
+                                'placeholder' => '',
+                                'maxlength' => '',
+                                'rows' => '',
+                                'formatting' => 'br',
+                            ),
+                        ),
+                        'row_min' => '',
+                        'row_limit' => '',
+                        'layout' => 'table',
+                        'button_label' => 'Add Row',
+                    ),
+                    array(
+                        'key' => 'field_568cac3fd3211',
+                        'label' => 'Description 2',
+                        'name' => 'description_2',
+                        'type' => 'repeater',
+                        'conditional_logic' => array(
+                            'status' => 1,
+                            'rules' => array(
+                                array(
+                                    'field' => 'field_568c98d5d320d',
+                                    'operator' => '==',
+                                    'value' => '応募条件',
+                                ),
+                            ),
+                            'allorany' => 'all',
+                        ),
+                        'column_width' => '',
+                        'sub_fields' => array(
+                            array(
+                                'key' => 'field_568cac51d3212',
+                                'label' => 'Sub Title',
+                                'name' => 'sub_title',
+                                'type' => 'select',
+                                'column_width' => '',
+                                'choices' => array(
+                                    '応募資格' => '応募資格',
+                                    '雇用区分' => '雇用区分',
+                                    '想定年収(給与詳細)' => '想定年収(給与詳細)',
+                                    '採用人数' => '採用人数',
+                                    '選考プロセス' => '選考プロセス',
+                                ),
+                                'default_value' => '',
+                                'allow_null' => 0,
+                                'multiple' => 0,
+                            ),
+                            array(
+                                'key' => 'field_568cac83d3213',
+                                'label' => 'Content',
+                                'name' => 'content',
+                                'type' => 'textarea',
+                                'column_width' => '',
+                                'default_value' => '',
+                                'placeholder' => '',
+                                'maxlength' => '',
+                                'rows' => '',
+                                'formatting' => 'br',
+                            ),
+                        ),
+                        'row_min' => '',
+                        'row_limit' => '',
+                        'layout' => 'table',
+                        'button_label' => 'Add Row',
+                    ),
+                    array(
+                        'key' => 'field_568caca9d3214',
+                        'label' => 'Description 3',
+                        'name' => 'description_3',
+                        'type' => 'repeater',
+                        'conditional_logic' => array(
+                            'status' => 1,
+                            'rules' => array(
+                                array(
+                                    'field' => 'field_568c98d5d320d',
+                                    'operator' => '==',
+                                    'value' => '動務・就業規定・その他情報',
+                                ),
+                            ),
+                            'allorany' => 'all',
+                        ),
+                        'column_width' => '',
+                        'sub_fields' => array(
+                            array(
+                                'key' => 'field_568cacbbd3215',
+                                'label' => 'Sub Title',
+                                'name' => 'sub_title',
+                                'type' => 'select',
+                                'column_width' => '',
+                                'choices' => array(
+                                    '勤務地' => '勤務地',
+                                    '勤務時間' => '勤務時間',
+                                    '待遇・福利厚生' => '待遇・福利厚生',
+                                    '休日/休暇' => '休日/休暇',
+                                ),
+                                'default_value' => '',
+                                'allow_null' => 0,
+                                'multiple' => 0,
+                            ),
+                            array(
+                                'key' => 'field_568cacd7d3216',
+                                'label' => 'Content',
+                                'name' => 'content',
+                                'type' => 'textarea',
+                                'column_width' => '',
+                                'default_value' => '',
+                                'placeholder' => '',
+                                'maxlength' => '',
+                                'rows' => '',
+                                'formatting' => 'br',
+                            ),
+                        ),
+                        'row_min' => '',
+                        'row_limit' => '',
+                        'layout' => 'table',
+                        'button_label' => 'Add Row',
+                    ),
+                ),
+                'row_min' => '',
+                'row_limit' => '',
+                'layout' => 'row',
+                'button_label' => 'Add Block Info',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'recruit',
                     'order_no' => 0,
                     'group_no' => 0,
                 ),
