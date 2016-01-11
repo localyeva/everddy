@@ -3,6 +3,7 @@
 @white: #fff;
 @green: #62B446;
 @boldgreen: #00A04C;
+@red: #ff0000;
 @blur-black: #000;
 @larg-button-text-size: 24px;
 @font-face{
@@ -656,6 +657,151 @@ ul{
     margin-bottom: 60px;
 }
 
+#recruit-application{
+    .nano { 
+        border: 1px solid #D3D3D3;
+        background: #fff; 
+        padding-bottom: 30px;
+        line-height: 30px;
+        height: 100px;
+        .nano-content { padding: 10px; }
+        .nano-pane   { background: f1f1f1; }
+        .nano-slider { background: #09afed !important; }
+    }
+    .form-control{
+        background-color: #f1f1f1;
+    }
+    .application-form{
+        margin-left: 20px;
+        margin-top: 20px;
+        background-color: white;
+
+        hr{
+            margin: 0 10px 0 20px;
+        }
+    }
+    .detail-group{
+        padding-top: 20px;
+        padding-left: 40px;
+        .required{
+            color: red;
+        }
+        small{
+            display: block;
+        }
+        label.stick-required::before{
+            content: "";
+            font-size: 12px;
+            margin-left: -15px;
+            margin-top: 10px;
+            padding: 10px 5px;
+            position: absolute;
+            background: #00A04C;
+            width: 5px;
+            height: 10px;                                    
+        }
+        label.stick::before{
+            content: "";
+            font-size: 12px;
+            margin-left: -15px;
+            margin-top: 1px;
+            padding: 10px 5px;
+            position: absolute;
+            background: #00A04C;
+            width: 5px;
+            height: 10px;                                    
+        }
+    }
+    .detail-agreement{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .submit-btn{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .top-pad{
+        padding-top: 60px;
+    }
+    .tb-bg{
+        background-color: #f1f1f1;
+    }
+    .tb-title{
+        padding-left: 80px;
+        padding-top: 10px
+    }
+}
+#recruit-detail{
+    hr{
+        border-top: 2px dotted grey;color:transparent;
+    }
+    .dotted-head{
+        margin: auto;
+        margin-top: -37px;
+        width: 200px;
+        background-color: #fff;
+    }
+    .sub-title{
+        color: #737373;
+        padding-bottom: 30px;
+    }
+    table.no-pad{
+        .col-1-3{
+            padding-right: 0px;
+        }
+
+        .col-1-1{
+            padding: 20px 0 20px 40px;
+        }
+    }
+
+    table.pad {
+        th{
+            width: 25%;
+            text-align: center;
+            background-color: #fafafd;
+            vertical-align: middle;
+            font-weight: normal;
+        }
+        td{
+            padding: 20px 0 20px 40px;
+        }
+    }
+    .bottom-pad{
+        padding-bottom: 60px;
+    }
+    .tb-bg{
+        background-color: #f1f1f1;
+    }
+    .tb-title{
+        font-weight: bold;
+        color: #5d789a;
+        margin-bottom: 18px;
+    }
+    ul.desc-list{
+        list-style: none;
+        li:before {
+            content: "•"; /* Insert content that looks like bullets */
+            padding-right: 8px;
+            color: black; /* Or a color you prefer */
+        }
+        .li-add{
+            padding-left: 14px;
+        }
+    }
+    .btn-recruit-apply{
+        font-size: @larg-button-text-size;
+        //background-color: @red;
+        padding-left: 26px;
+        padding-right: 26px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        &:hover{
+            //background-color: #62b446;
+        }
+    }
+}
 
 /*--------------------------------------------------------------------- import*/
 @import 'screen-xs.less';

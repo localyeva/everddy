@@ -603,6 +603,144 @@ ul {
   font-size: 24px;
   margin-bottom: 60px;
 }
+#recruit-application .nano {
+  border: 1px solid #D3D3D3;
+  background: #fff;
+  padding-bottom: 30px;
+  line-height: 30px;
+  height: 100px;
+}
+#recruit-application .nano .nano-content {
+  padding: 10px;
+}
+#recruit-application .nano .nano-pane {
+  background: f1f1f1;
+}
+#recruit-application .nano .nano-slider {
+  background: #09afed !important;
+}
+#recruit-application .form-control {
+  background-color: #f1f1f1;
+}
+#recruit-application .application-form {
+  margin-left: 20px;
+  margin-top: 20px;
+  background-color: white;
+}
+#recruit-application .application-form hr {
+  margin: 0 10px 0 20px;
+}
+#recruit-application .detail-group {
+  padding-top: 20px;
+  padding-left: 40px;
+}
+#recruit-application .detail-group .required {
+  color: red;
+}
+#recruit-application .detail-group small {
+  display: block;
+}
+#recruit-application .detail-group label.stick-required::before {
+  content: "";
+  font-size: 12px;
+  margin-left: -15px;
+  margin-top: 10px;
+  padding: 10px 5px;
+  position: absolute;
+  background: #00A04C;
+  width: 5px;
+  height: 10px;
+}
+#recruit-application .detail-group label.stick::before {
+  content: "";
+  font-size: 12px;
+  margin-left: -15px;
+  margin-top: 1px;
+  padding: 10px 5px;
+  position: absolute;
+  background: #00A04C;
+  width: 5px;
+  height: 10px;
+}
+#recruit-application .detail-agreement {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#recruit-application .submit-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#recruit-application .top-pad {
+  padding-top: 60px;
+}
+#recruit-application .tb-bg {
+  background-color: #f1f1f1;
+}
+#recruit-application .tb-title {
+  padding-left: 80px;
+  padding-top: 10px;
+}
+#recruit-detail hr {
+  border-top: 2px dotted grey;
+  color: transparent;
+}
+#recruit-detail .dotted-head {
+  margin: auto;
+  margin-top: -37px;
+  width: 200px;
+  background-color: #fff;
+}
+#recruit-detail .sub-title {
+  color: #737373;
+  padding-bottom: 30px;
+}
+#recruit-detail table.no-pad .col-1-3 {
+  padding-right: 0px;
+}
+#recruit-detail table.no-pad .col-1-1 {
+  padding: 20px 0 20px 40px;
+}
+#recruit-detail table.pad th {
+  width: 25%;
+  text-align: center;
+  background-color: #fafafd;
+  vertical-align: middle;
+  font-weight: normal;
+}
+#recruit-detail table.pad td {
+  padding: 20px 0 20px 40px;
+}
+#recruit-detail .bottom-pad {
+  padding-bottom: 60px;
+}
+#recruit-detail .tb-bg {
+  background-color: #f1f1f1;
+}
+#recruit-detail .tb-title {
+  font-weight: bold;
+  color: #5d789a;
+  margin-bottom: 18px;
+}
+#recruit-detail ul.desc-list {
+  list-style: none;
+}
+#recruit-detail ul.desc-list li:before {
+  content: "•";
+  /* Insert content that looks like bullets */
+  padding-right: 8px;
+  color: black;
+  /* Or a color you prefer */
+}
+#recruit-detail ul.desc-list .li-add {
+  padding-left: 14px;
+}
+#recruit-detail .btn-recruit-apply {
+  font-size: 24px;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
 /*--------------------------------------------------------------------- import*/
 @media (min-width: 768px) and (max-width: 991px) {
   .text-left-head h1 {
