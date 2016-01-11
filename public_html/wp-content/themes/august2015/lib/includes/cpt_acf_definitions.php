@@ -178,6 +178,8 @@ function cptui_register_my_cpts() {
         "hierarchical" => false,
         "rewrite" => array("slug" => "recruit", "with_front" => true),
         "query_var" => true,
+        "menu_position" => 32,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h7.png',
         "supports" => array("title", "editor"),
     );
     register_post_type("recruit", $args);
