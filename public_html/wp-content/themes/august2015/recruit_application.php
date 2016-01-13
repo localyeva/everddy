@@ -1,7 +1,7 @@
 <?php
 /*
  * Author: KhangLe
- * Template Name: Recruit Application
+ * Template Name: Recruiting
  * 
  */
 
@@ -17,9 +17,6 @@ get_header();
             <script type="text/javascript" src="https://app-webparts-hrbc.porterscloud.com/po-b.js" data-template-id="11649"></script><script type="porters/webparts"></script>
         </div>
     </div>
-
 </section><!-- #content -->
-
-
 
 <?php get_footer(); ?>

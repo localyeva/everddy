@@ -552,6 +552,7 @@ if (function_exists("register_field_group")) {
                                 'type' => 'select',
                                 'column_width' => '',
                                 'choices' => array(
+                                    '求人No' => '求人No',
                                     '募集背景' => '募集背景',
                                     '概要' => '概要',
                                 ),
@@ -659,6 +660,7 @@ if (function_exists("register_field_group")) {
                                     '勤務時間' => '勤務時間',
                                     '待遇・福利厚生' => '待遇・福利厚生',
                                     '休日/休暇' => '休日/休暇',
+                                    '備考欄' => '備考欄',
                                 ),
                                 'default_value' => '',
                                 'allow_null' => 0,

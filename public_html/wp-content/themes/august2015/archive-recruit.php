@@ -10,12 +10,11 @@ global $theme_options;
 get_header();
 ?>
 
-
 <section id="recruit-detail" class="site-content">
     <div class="grid grid-pad">
         <div class="col-1-1">
             <hr>
-            <h2 class="main-title text-center dotted-head">サービスサ</h2>
+            <h2 class="main-title text-center dotted-head">求人情報</h2>
         </div>
     </div>
 
@@ -59,7 +58,7 @@ get_header();
                         <?php endwhile; ?>
                     <?php endif; ?>
                     <div class="text-center">
-                        <a href="<?php echo home_url()?>/recruit-application" class="btn btn-danger square-btn btn-recruit-apply pad-btn">企業概要はこちら</a>
+                        <a href="<?php echo home_url('recruiting')?>" class="btn btn-danger square-btn btn-recruit-apply pad-btn">応募フォーム</a>
                     </div>
                     <div class="bottom-pad"></div>
                 </div>
