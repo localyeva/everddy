@@ -24,6 +24,7 @@ get_header();
                 <div class="grid grid-pad">
                     <div class="col-1-1">
                         <h2 class="main-title"><?php the_title() ?></h2>
+                        <p class="sub-title"><?php echo get_field('sub_title');?></p>
                         <?php the_content() ?>
                     </div>
                 </div>
