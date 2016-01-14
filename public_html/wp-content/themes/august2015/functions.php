@@ -105,7 +105,7 @@ function set_wp_title($title, $sep) {
     if (is_feed()) {
         return $title;
     }
-    
+
     // Add the site name.
     $title .= get_bloginfo('name');
 
@@ -155,7 +155,7 @@ $active_menus = array();
 function set_active_menu() {
     global $active_menus;
 
-    $active_menus = array('home' => '', 'service-feature' => '', 'service-detail' => '', 'benefit' => '', 'profile' => '');
+    $active_menus = array('home' => '', 'service-feature' => '', 'service-detail' => '', 'benefit' => '', 'profile' => '', 'recruit' => '');
     if (is_front_page() || is_home()) {
         $active_menus['home'] = 'current_page_item';
     } else if (is_page('service-feature')) {
@@ -166,6 +166,8 @@ function set_active_menu() {
         $active_menus['benefit'] = 'current_page_item';
     } else if (is_page('profile')) {
         $active_menus['profile'] = 'current_page_item';
+    } else if (is_archive('recruit')) {
+        $active_menus['recruit'] = 'current_page_item';
     }
 }
 
@@ -218,7 +220,7 @@ function remove_menus() {
     $arr_roles = array('administrator');
 
     if (in_array($role, $arr_roles)) {
-    	remove_menu_page('edit.php?post_type=acf');     // ACF
+        remove_menu_page('edit.php?post_type=acf');     // ACF
         remove_menu_page('index.php');                  //Dashboard
         remove_menu_page('edit.php');                   //Posts
 //        remove_menu_page('upload.php');                 //Media
