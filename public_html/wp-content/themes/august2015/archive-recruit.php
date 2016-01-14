@@ -58,15 +58,23 @@ get_header();
                             </div>
                         <?php endwhile; ?>
                     <?php endif; ?>
-                    <div class="text-center">
+                    <div class="col-1-1 text-center">
                         <a href="<?php echo home_url('recruiting')?>" class="btn btn-danger square-btn btn-recruit-apply pad-btn">応募フォーム</a>
-                    </div>
-                    <div class="bottom-pad"></div>
+                        <div class="bottom-pad"></div>
+                    </div>                    
                 </div>
             </section>            
         <?php endwhile; ?>
     <?php endif; ?>
-
+    <div class="grid grid-pad">
+        <div class="col-1-1 text-center">
+            <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } else { ?>
+            <div class="back_left"><?php next_posts_link('&laquo; Older') ?></div>
+            <div class="next_right"><?php previous_posts_link('Newer &raquo;') ?></div>
+            <?php } ?>
+            <div class="bottom-pad"></div>
+        </div>        
+    </div>        
 </section><!-- #content -->
 
 <?php get_footer(); ?>
