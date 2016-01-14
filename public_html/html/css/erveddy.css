@@ -603,6 +603,9 @@ ul {
   font-size: 24px;
   margin-bottom: 60px;
 }
+#recruit-application .grid {
+  max-width: 960px;
+}
 #recruit-application .nano {
   border: 1px solid #D3D3D3;
   background: #fff;
@@ -679,6 +682,9 @@ ul {
 #recruit-application .tb-title {
   padding-left: 80px;
   padding-top: 10px;
+}
+#recruit-detail .grid {
+  max-width: 960px;
 }
 #recruit-detail hr {
   border-top: 2px dotted grey;
