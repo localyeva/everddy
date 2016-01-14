@@ -507,6 +507,18 @@ if (function_exists("register_field_group")) {
         'title' => 'Recruit',
         'fields' => array(
             array(
+                'key' => 'field_569744c5e2b69',
+                'label' => 'Sub Title',
+                'name' => 'sub_title',
+                'type' => 'text',
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'none',
+                'maxlength' => '',
+            ),
+            array(
                 'key' => 'field_568c90bdd320c',
                 'label' => 'Block Info',
                 'name' => 'block_info',
