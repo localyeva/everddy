@@ -23,16 +23,17 @@ get_header();
                 <div class="grid grid-pad">
                     <div class="col-1-1">
                         <h2 class="main-title"><?php the_title() ?></h2>
-                        <p class="sub-title"><?php echo get_field('sub_title');?></p>
+                        <p class="sub-title"><?php echo get_field('sub_title'); ?></p>
                         <?php the_content() ?>
                     </div>
                 </div>
 
                 <div class="grid grid-pad">
-                    <?php 
-                        $job_no = "-1";
-                        $displayed = false;                        
-                        if (have_rows('block_info')): ?>
+                    <?php
+                    $job_no = "-1";
+                    $displayed = false;
+                    if (have_rows('block_info')):
+                        ?>
                         <?php
                         while (have_rows('block_info')): the_row();
                             $tname = "description_1";
@@ -49,47 +50,50 @@ get_header();
                                 <p class="tb-title"><?php echo get_sub_field('title') ?></p>
                                 <table class="pad table-bordered table-responsive blur-black">
                                     <?php while (have_rows($tname)): the_row() ?>
-                                        <?php                                         
-                                        if ($title == '企業・求人概要' && !$displayed): 
-                                        ?>
-                                        <tr>
-                                            <th>求人No</th>
-                                            <td>
-                                                <?php 
-                                                    $job_no = get_field('job_no'); 
-                                                    echo get_field('job_no'); 
+                                        <?php
+                                        if ($title == '企業・求人概要' && !$displayed):
+                                            ?>
+                                            <tr>
+                                                <th>求人No</th>
+                                                <td>
+                                                    <?php
+                                                    $job_no = get_field('job_no');
+                                                    echo get_field('job_no');
                                                     $displayed = TRUE;
-                                                ?>
-                                            </td>
-                                        </tr>
-                                        <?php endif; ?>
+                                                    ?>
+                                                </td>
+                                            </tr>
+                    <?php endif; ?>
                                         <tr>
                                             <th><?php echo get_sub_field('sub_title') ?></th>
                                             <td>    
-                                                <?php echo get_sub_field('content') ?>                        
+                    <?php echo get_sub_field('content') ?>                        
                                             </td>
                                         </tr>
-                                    <?php endwhile; ?>                
+                <?php endwhile; ?>                
                                 </table>                            
                             </div>
                         <?php endwhile; ?>
-                    <?php endif; 
-                        $job_no = empty($job_no)?"-1":$job_no;
+                    <?php
+                    endif;
+                    $job_no = empty($job_no) ? "-1" : $job_no;
                     ?>
                     <div class="col-1-1 text-center">
-                        <a id="<?php echo $job_no?>" href="<?php echo home_url('recruiting')?>" class="btn btn-danger square-btn btn-recruit-apply pad-btn">応募フォーム</a>
+                        <a href="javascript:void(0);" data-id="<?php echo $job_no ?>" data-href="<?php echo home_url('recruiting') ?>" class="btn btn-danger square-btn btn-recruit-apply pad-btn">応募フォーム</a>
                         <div class="bottom-pad"></div>
                     </div>                    
                 </div>
             </section>            
-        <?php endwhile; ?>
-    <?php endif; ?>
+    <?php endwhile; ?>
+            <?php endif; ?>
     <div class="grid grid-pad">
         <div class="col-1-1 text-center">
-            <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } else { ?>
-            <div class="back_left"><?php next_posts_link('&laquo; Older') ?></div>
-            <div class="next_right"><?php previous_posts_link('Newer &raquo;') ?></div>
-            <?php } ?>
+            <?php if (function_exists('wp_pagenavi')) {
+                wp_pagenavi();
+            } else { ?>
+                <div class="back_left"><?php next_posts_link('&laquo; Older') ?></div>
+                <div class="next_right"><?php previous_posts_link('Newer &raquo;') ?></div>
+<?php } ?>
             <div class="bottom-pad"></div>
         </div>        
     </div>        
@@ -97,8 +101,8 @@ get_header();
 
 <?php get_footer(); ?>
 <script type="text/javascript">
-    $('.btn-recruit-apply').click(function(){
-        document.cookie = "job_no=" + this.id + ";path=/";
-        location.href = this.href;
-    })
+    $('.btn-recruit-apply').click(function () {
+        document.cookie = "job_no=" + $(this).data('id') + ";path=/";
+        location.href = $(this).data('href');
+    });
 </script>
