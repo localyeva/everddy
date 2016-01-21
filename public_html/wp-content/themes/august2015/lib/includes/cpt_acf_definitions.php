@@ -519,6 +519,19 @@ if (function_exists("register_field_group")) {
                 'maxlength' => '',
             ),
             array(
+                'key' => 'field_56a053cbc1236',
+                'label' => '求人No',
+                'name' => 'job_no',
+                'type' => 'text',
+                'required' => 1,
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'none',
+                'maxlength' => '',
+            ),
+            array(
                 'key' => 'field_568c90bdd320c',
                 'label' => 'Block Info',
                 'name' => 'block_info',
@@ -564,7 +577,6 @@ if (function_exists("register_field_group")) {
                                 'type' => 'select',
                                 'column_width' => '',
                                 'choices' => array(
-                                    '求人No' => '求人No',
                                     '募集背景' => '募集背景',
                                     '概要' => '概要',
                                 ),
@@ -654,7 +666,7 @@ if (function_exists("register_field_group")) {
                                 array(
                                     'field' => 'field_568c98d5d320d',
                                     'operator' => '==',
-                                    'value' => '動務・就業規定・その他情報',
+                                    'value' => '勤務・就業規定・その他情報', 
                                 ),
                             ),
                             'allorany' => 'all',

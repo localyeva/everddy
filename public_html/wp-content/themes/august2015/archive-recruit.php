@@ -29,7 +29,10 @@ get_header();
                 </div>
 
                 <div class="grid grid-pad">
-                    <?php if (have_rows('block_info')): ?>
+                    <?php 
+                        $job_no = "-1";
+                        $displayed = false;                        
+                        if (have_rows('block_info')): ?>
                         <?php
                         while (have_rows('block_info')): the_row();
                             $tname = "description_1";
@@ -46,6 +49,20 @@ get_header();
                                 <p class="tb-title"><?php echo get_sub_field('title') ?></p>
                                 <table class="pad table-bordered table-responsive blur-black">
                                     <?php while (have_rows($tname)): the_row() ?>
+                                        <?php                                         
+                                        if ($title == '企業・求人概要' && !$displayed): 
+                                        ?>
+                                        <tr>
+                                            <th>求人No</th>
+                                            <td>
+                                                <?php 
+                                                    $job_no = get_field('job_no'); 
+                                                    echo get_field('job_no'); 
+                                                    $displayed = TRUE;
+                                                ?>
+                                            </td>
+                                        </tr>
+                                        <?php endif; ?>
                                         <tr>
                                             <th><?php echo get_sub_field('sub_title') ?></th>
                                             <td>    
@@ -56,9 +73,11 @@ get_header();
                                 </table>                            
                             </div>
                         <?php endwhile; ?>
-                    <?php endif; ?>
+                    <?php endif; 
+                        $job_no = empty($job_no)?"-1":$job_no;
+                    ?>
                     <div class="col-1-1 text-center">
-                        <a href="<?php echo home_url('recruiting')?>" class="btn btn-danger square-btn btn-recruit-apply pad-btn">応募フォーム</a>
+                        <a id="<?php echo $job_no?>" href="<?php echo home_url('recruiting')?>" class="btn btn-danger square-btn btn-recruit-apply pad-btn">応募フォーム</a>
                         <div class="bottom-pad"></div>
                     </div>                    
                 </div>
@@ -77,3 +96,9 @@ get_header();
 </section><!-- #content -->
 
 <?php get_footer(); ?>
+<script type="text/javascript">
+    $('.btn-recruit-apply').click(function(){
+        document.cookie = "job_no=" + "<?php echo $job_no?>;path=/";
+        location.href = this.href;
+    })
+</script>

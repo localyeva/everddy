@@ -20,6 +20,7 @@
                     <p>Zip: <?php echo $theme_options['ct_com_zip_code'] ?></p>
                 <?php endif; ?>
                 <p><span class="dif-text">Tel: </span><span><?php echo esc_html($theme_options['ct_com_telephone']) ?> - </span><span class="dif-text">Fax: </span><span><?php echo esc_html($theme_options['ct_com_fax']) ?></span></p>
+                <p><a href="https://www.facebook.com/everddy/"><img src="<?php echo get_template_directory_uri() ?>/img/facebook_icon.png"/></a></p>
             </aside>
         </div>
     </div><!-- grid -->
@@ -28,6 +29,7 @@
 </div><!-- #page -->        
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/js/jquery.blockUI.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/js/jquery.rwdImageMaps.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/js/jquery.nanoscroller.min.js"></script>        
 <script src="<?php echo get_template_directory_uri() ?>/js/jquery.overthrow.min.js"></script>
