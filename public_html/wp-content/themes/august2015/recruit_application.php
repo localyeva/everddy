@@ -40,7 +40,7 @@ get_header();
         if(job_no != "-1"){
             $('#job_no').html(job_no);
         }
-/*
+
         $.blockUI({message: '<span><img src="<?php echo get_template_directory_uri() ?>/img/loading.gif" /> Loading...</span>',
             css: {
                 border: 'none',
@@ -64,7 +64,7 @@ get_header();
             }
             
         }, 3000);
-   */     
+
         /*
         setTimeout(function(){
             $('.main-title').addClass("po-webparts-container");

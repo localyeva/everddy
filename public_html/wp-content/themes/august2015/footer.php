@@ -24,7 +24,7 @@
             </aside>
         </div>
         <div class="col-1-2">
-            <div class="fb-page" data-href="https://www.facebook.com/everddy/" data-tabs="timeline" data-width="500" data-height="200" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/everddy/"><a href="https://www.facebook.com/everddy/">Work In Japan-Consulting Service＜就職情報＞株式会社エバディ</a></blockquote></div></div>
+            <div class="fb-page" data-href="https://www.facebook.com/everddy/" data-tabs="timeline" data-width="500" data-height="200" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/everddy/"><a href="https://www.facebook.com/everddy/">Work In Japan-Consulting Service＜就職情報＞株式会社エバディ</a></blockquote></div></div>
         </div>
     </div><!-- grid -->
 
