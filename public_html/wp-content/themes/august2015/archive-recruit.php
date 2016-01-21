@@ -79,8 +79,7 @@ get_header();
                     $job_no = empty($job_no) ? "-1" : $job_no;
                     ?>
                     <div class="col-1-1 text-center">
-                        <a href="javascript:void(0);" data-id="<?php echo $job_no ?>" data-href="<?php echo home_url('recruiting') ?>" class="btn btn-danger square-btn btn-recruit-apply pad-btn">応募フォーム</a>
-                        <div class="bottom-pad"></div>
+                        <a href="javascript:void(0);" data-id="<?php echo $job_no ?>" data-href="<?php echo home_url('recruiting') ?>" class="btn btn-danger square-btn btn-recruit-apply pad-btn">応募フォーム</a>                        
                     </div>                    
                 </div>
             </section>            
@@ -93,8 +92,7 @@ get_header();
             } else { ?>
                 <div class="back_left"><?php next_posts_link('&laquo; Older') ?></div>
                 <div class="next_right"><?php previous_posts_link('Newer &raquo;') ?></div>
-<?php } ?>
-            <div class="bottom-pad"></div>
+<?php } ?>                
         </div>        
     </div>        
 </section><!-- #content -->

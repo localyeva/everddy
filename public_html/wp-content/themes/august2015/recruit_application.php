@@ -14,8 +14,10 @@ get_header();
     <div class="grid grid-pad no-pad">
         <div class="col-1-1">
             <h2 class="main-title">お申し込みフォーム</h2>
-            <h3>お申し込みになった求人のNOは<strong id="job_no"></strong>です。</h3>
+            <h3>お申し込みになった求人NOは<strong id="job_no" style="color: red"></strong>です。</h3>
             <script type="text/javascript" src="https://app-webparts-hrbc.porterscloud.com/po-b.js" data-template-id="11649"></script><script type="porters/webparts"></script>
+            
+            <div style="padding-bottom: 60px"></div>
         </div>
     </div>
 </section><!-- #content -->
@@ -38,7 +40,7 @@ get_header();
         if(job_no != "-1"){
             $('#job_no').html(job_no);
         }
-
+/*
         $.blockUI({message: '<span><img src="<?php echo get_template_directory_uri() ?>/img/loading.gif" /> Loading...</span>',
             css: {
                 border: 'none',
@@ -62,7 +64,7 @@ get_header();
             }
             
         }, 3000);
-        
+   */     
         /*
         setTimeout(function(){
             $('.main-title').addClass("po-webparts-container");

@@ -546,7 +546,7 @@ if (function_exists("register_field_group")) {
                         'choices' => array(
                             '企業・求人概要' => '企業・求人概要',
                             '応募条件' => '応募条件',
-                            '動務・就業規定・その他情報' => '動務・就業規定・その他情報',
+                            '勤務・就業規定・その他情報' => '勤務・就業規定・その他情報',
                         ),
                         'default_value' => '',
                         'allow_null' => 0,
