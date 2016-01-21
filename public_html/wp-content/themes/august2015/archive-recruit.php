@@ -98,7 +98,7 @@ get_header();
 <?php get_footer(); ?>
 <script type="text/javascript">
     $('.btn-recruit-apply').click(function(){
-        document.cookie = "job_no=" + "<?php echo $job_no?>;path=/";
+        document.cookie = "job_no=" + this.id + ";path=/";
         location.href = this.href;
     })
 </script>
