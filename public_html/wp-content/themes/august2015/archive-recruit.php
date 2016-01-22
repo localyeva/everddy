@@ -42,7 +42,7 @@ get_header();
                                 $tname = "description_1";
                             } else if ($title == '応募条件') {
                                 $tname = "description_2";
-                            } else if ($title == '動務・就業規定・その他情報') {
+                            } else if ($title == '勤務・就業規定・その他情報') {
                                 $tname = "description_3";
                             }
                             ?>
