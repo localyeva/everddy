@@ -14,6 +14,13 @@
         <meta content="転職、求人、中途採用、ITエンジニア、Webエンジニア、グローバル人材、外国人採用、java、php、エバディ、everddy" itemprop="keywords" name="keywords">
 
         <title><?php echo wp_title('｜') ?></title>
+        
+        <!-- FACE BOOK start -->
+        <meta property="og:title" content="IT/Web業界の人材やグローバル人材の紹介ならエバディ" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://everddy.com/" />        
+        <meta property="og:image"  content="http://everddy.com/wp-content/uploads/2016/01/facebook-opg.png" />
+        <!-- //FACE BOOK end -->
 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" id="prefix-font-awesome-css" href="<?php echo get_template_directory_uri() ?>/css/font-awesome.min.css" media="all">
