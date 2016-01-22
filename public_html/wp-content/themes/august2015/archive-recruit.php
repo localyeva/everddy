@@ -44,6 +44,8 @@ get_header();
                                 $tname = "description_2";
                             } else if ($title == '勤務・就業規定・その他情報') {
                                 $tname = "description_3";
+                            } else if ($title == '募集要項') {
+                                $tname = "description_4";
                             }
                             ?>
                             <div class="col-1-1">
@@ -51,7 +53,7 @@ get_header();
                                 <table class="pad table-bordered table-responsive blur-black">
                                     <?php while (have_rows($tname)): the_row() ?>
                                         <?php
-                                        if ($title == '企業・求人概要' && !$displayed):
+                                        if ($title == '募集要項' && !$displayed):
                                             ?>
                                             <tr>
                                                 <th>求人No</th>
@@ -63,18 +65,18 @@ get_header();
                                                     ?>
                                                 </td>
                                             </tr>
-                    <?php endif; ?>
+                                        <?php endif; ?>
                                         <tr>
                                             <th><?php echo get_sub_field('sub_title') ?></th>
                                             <td>    
-                    <?php echo get_sub_field('content') ?>                        
+                                                <?php echo get_sub_field('content') ?>                        
                                             </td>
                                         </tr>
-                <?php endwhile; ?>                
+                                    <?php endwhile; ?>                
                                 </table>                            
                             </div>
                         <?php endwhile; ?>
-                    <?php
+                        <?php
                     endif;
                     $job_no = empty($job_no) ? "-1" : $job_no;
                     ?>
@@ -83,13 +85,15 @@ get_header();
                     </div>                    
                 </div>
             </section>            
-    <?php endwhile; ?>
-            <?php endif; ?>
+        <?php endwhile; ?>
+    <?php endif; ?>
     <div class="grid grid-pad">
         <div class="col-1-1 text-center">
-            <?php if (function_exists('wp_pagenavi')) {
+            <?php
+            if (function_exists('wp_pagenavi')) {
                 wp_pagenavi();
-            } else { ?>
+            } else {
+                ?>
                 <div class="back_left"><?php next_posts_link('&laquo; Older') ?></div>
                 <div class="next_right"><?php previous_posts_link('Newer &raquo;') ?></div>
 <?php } ?>                
