@@ -85,9 +85,9 @@ get_header();
                     </div>                    
                 </div>
             </section>            
-        <?php endwhile; ?>
-    <?php endif; ?>
-    <div class="grid grid-pad">
+    <?php endwhile; ?>
+            <?php endif; ?>
+    <div class="grid grid-pad" style="padding-top: 40px; padding-bottom:60px">
         <div class="col-1-1 text-center">
             <?php
             if (function_exists('wp_pagenavi')) {
@@ -96,7 +96,7 @@ get_header();
                 ?>
                 <div class="back_left"><?php next_posts_link('&laquo; Older') ?></div>
                 <div class="next_right"><?php previous_posts_link('Newer &raquo;') ?></div>
-<?php } ?>                
+<?php } ?>        
         </div>        
     </div>        
 </section><!-- #content -->

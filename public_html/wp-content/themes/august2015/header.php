@@ -73,12 +73,12 @@
                                         <li id="menu-item-2" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2 <?php echo $active_menus['service-detail'] ?>"><a href="<?php echo bloginfo('url') ?>/service-detail">サービス</a></li>
                                         <!--li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3 <?php echo $active_menus['service-feature'] ?>"><a href="<?php echo bloginfo('url') ?>/service-feature">ご利用メリット</a></li-->
                                         <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4 <?php echo $active_menus['benefit'] ?>"><a href="<?php echo bloginfo('url') ?>/benefit">外国人採用メリット</a></li>
-                                        <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5 <?php echo $active_menus['profile'] ?>"><a href="<?php echo bloginfo('url') ?>/profile"><?php echo get_profile_top_text() ?></a></li>
+                                        <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5 <?php echo $active_menus['profile'] ?>"><a href="<?php echo bloginfo('url') ?>/profile"><?php echo get_profile_top_text() ?></a></li>                
+                                        <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5 <?php echo $active_menus['service-feature'] ?>"><a href="<?php echo bloginfo('url') ?>/service-feature">働くを考える</a></li>
                                         <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5 <?php echo $active_menus['recruit'] ?>"><a href="<?php echo bloginfo('url') ?>/recruit">求人情報</a></li>
+                                        <li id="menu-item-6" class="btn-first-head menu-item menu-item-type-post_type menu-item-object-page menu-item-6 btn-head-pad"><a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn">お問い合わせ</a></li>
 
-                                        <li id="menu-item-6" class="btn-first-head menu-item menu-item-type-post_type menu-item-object-page menu-item-6 btn-head-pad"><a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn">お問い合わせはこちら</a></li>
-
-                                        <li id="menu-item-7" class="btn-second-head menu-item menu-item-type-post_type menu-item-object-page menu-item-7 btn-head-pad"><a href="<?php echo bloginfo('url') ?>/contact-job" class="btn btn-warning square-btn pad-btn btn-contact-width">求職のご相談はこちら</a></li>
+                                        <li id="menu-item-7" class="btn-second-head menu-item menu-item-type-post_type menu-item-object-page menu-item-7 btn-head-pad"><a href="<?php echo bloginfo('url') ?>/contact-job" class="btn btn-warning square-btn pad-btn btn-contact-width">求職のご相談</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -97,11 +97,13 @@
                         <!--li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/service-feature">ご利用メリット</a></li-->
                         <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/benefit">外国人採用メリット</a></li>
                         <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/profile"><?php echo get_profile_top_text() ?></a></li>
+                        
+                        <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/service-feature">働くを考える</a></li>
                         <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/recruit">求人情報</a></li>
 
-                        <li id="menu-item-6" class="btn-m-first-head menu-item menu-item-type-post_type menu-item-object-page menu-item-6 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn">お問い合わせはこちら</a></li>
+                        <li id="menu-item-6" class="btn-m-first-head menu-item menu-item-type-post_type menu-item-object-page menu-item-6 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/contact" class="btn btn-primary square-btn">お問い合わせ</a></li>
 
-                        <li id="menu-item-7" class="btn-m-second-head menu-item menu-item-type-post_type menu-item-object-page menu-item-7 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/contact-job" class="btn btn-warning square-btn pad-btn">求職のご相談はこちら</a></li>
+                        <li id="menu-item-7" class="btn-m-second-head menu-item menu-item-type-post_type menu-item-object-page menu-item-7 <?php echo $active_menu ?>"><a href="<?php echo bloginfo('url') ?>/contact-job" class="btn btn-warning square-btn pad-btn">求職のご相談</a></li>
 
                     </ul>
                 </div>		
